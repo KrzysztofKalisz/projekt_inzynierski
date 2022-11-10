@@ -1,0 +1,320 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  outline: none;
+}
+
+*, *::after, *::before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 0.02em;
+  max-height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  background: none;
+  cursor: pointer;
+}
+
+.button {
+  font-size: 16px;
+  font-weight: 700;
+  height: 60px;
+  background: #fff;
+  color: #000;
+  width: 100%;
+  text-decoration: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  height: 122px;
+}
+header .black-box {
+  height: 25px;
+  width: 100%;
+  background: #1B214B;
+}
+header .floor {
+  position: absolute;
+  top: 69px;
+  left: 135px;
+}
+header .floor h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+main .floors {
+  width: 135px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .floors .label {
+  margin: 0 0 15px;
+  font-size: 16px;
+  font-weight: 700;
+}
+main .floors .list {
+  display: flex;
+  flex-direction: column;
+}
+main .floors .list .item {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #E3E3E3;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #AEAEAE;
+  border-radius: 10px;
+  margin: 10px 0 0;
+}
+main .floors .list .item.current {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+main .main-search {
+  margin: 35px 40px 40px 135px;
+  position: relative;
+}
+main .main-search .map {
+  width: calc(100% - 340px);
+  height: 694px;
+  box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: relative;
+}
+main .main-search .map .shop-logo {
+  width: 100%;
+  max-width: 170px;
+  position: absolute;
+  top: 30px;
+  right: 55px;
+}
+main .main-search .map .shop-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+main .main-search .shops-list {
+  background: #1B214B;
+  border-radius: 10px;
+  width: 350px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 35px 40px 45px;
+  max-height: 885px;
+  height: 100%;
+}
+main .main-search .shops-list .search {
+  position: relative;
+  margin: 0 0 20px;
+}
+main .main-search .shops-list .search::before {
+  content: "";
+  display: block;
+  background-image: url(../../images/icon-search.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 0;
+  top: 3px;
+}
+main .main-search .shops-list .search input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  color: #AEAEAE;
+  padding: 0 0 18px;
+}
+main .main-search .shops-list .search input::placeholder {
+  opacity: 1;
+  color: #AEAEAE;
+}
+main .main-search .shops-list ul {
+  margin: 20px 0 0;
+  height: calc(100% - 80px);
+  overflow: scroll;
+}
+main .main-search .shops-list ul li button {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 41px;
+}
+main .main-search .shops-list ul li.title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0.3;
+  margin: 27px 0 20px;
+  line-height: 21px;
+}
+main .main-search .shops-list .shop-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+main .main-search .shops-list .shop-details .top .title {
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 700;
+  color: #fff;
+}
+main .main-search .shops-list .shop-details .top .subtitle {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #AEAEAE;
+  text-transform: uppercase;
+}
+main .main-search .shops-list .shop-details .top .desc {
+  margin: 52px 0 0;
+}
+main .main-search .shops-list .shop-details .top .desc p {
+  color: #fff;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 500;
+  margin: 0 0 20px;
+}
+main .main-search .shops-list .shop-details .top .desc p:last-child {
+  margin: 0;
+}
+main .main-search .shops-list .shop-details .bottom .qr-code {
+  width: 100px;
+  height: 100px;
+}
+main .main-search .shops-list .shop-details .bottom .qr-code img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+main .main-search .shops-list .shop-details .bottom .button {
+  margin: 40px 0 0;
+}
+main .main-search .categories {
+  width: 100%;
+  max-width: 1395px;
+  margin: 32px 0 0;
+  padding: 0 10px 0 0;
+}
+main .main-search .categories .title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+main .main-search .categories .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .main-search .categories .list li button {
+  font-size: 13px;
+  font-weight: 600;
+  height: 53px;
+  border: 1px solid #E3E3E3;
+  border-radius: 10px;
+  box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.05);
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  min-width: 130px;
+  margin: 0 10px 10px 0;
+}
+main .main-search .categories .list li.current button {
+  color: #fff;
+  background: #000;
+  border: 1px solid #000;
+}
+
+/*# sourceMappingURL=style.css.map */

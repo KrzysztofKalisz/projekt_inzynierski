@@ -1,0 +1,33 @@
+*, *::after, *::before{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+    color: #000;
+    @include letter-spacing(20);
+    max-height: 100vh;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+input{
+    font-family: 'Poppins', sans-serif;
+}
+
+button{
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    background: none;
+    cursor: pointer;
+}

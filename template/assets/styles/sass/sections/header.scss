@@ -1,0 +1,20 @@
+header{
+    height: 122px;
+
+    .black-box{
+        height: 25px;
+        width: 100%;
+        background: #1B214B;
+    }
+
+    .floor{
+        position: absolute;
+        top: 69px;
+        left: 135px;
+
+        h3{
+            font-size: 28px;
+            font-weight: 700;
+        }
+    }
+}

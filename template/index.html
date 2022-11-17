@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projekt inżynierski</title>
-    
+
     <!-- CSS -->
+    <link rel="stylesheet" href="./assets/styles/css/jkeyboard.css">
     <link rel="stylesheet" href="./assets/styles/css/style.css">
     <link rel="stylesheet" href="fix.css">
-    
+
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="floor">
@@ -22,72 +27,326 @@
         <div class="black-box"></div>
     </header>
     <main>
-        <div class="floors">
-            <p class="label">Poziom</p>
-            <div class="list">
-                <button class="item current">1</button>
-                <button class="item">2</button>
+        <div class="search">
+            <div class="floors">
+                <p class="label">Poziom</p>
+                <div class="list">
+                    <button class="item" data-switch-floor="1">1</button>
+                    <button class="item current" data-switch-floor="2">0</button>
+                </div>
             </div>
-        </div>
-        <div class="main-search">
-            <div class="map">
-            </div>
-            <div class="shops-list">
-                    <form action="">
-                        <div class="search">
-                            <input type="text" name="" id="" placeholder="Wpisz nazwę sklepu">
+            <div class="main-search">
+                <div class="map">
+                    <div class="map-box active-floor-2" id="sketchContainer"
+                        style="height: 694px; transform: none; transform-origin: 50% 50% 0px; cursor: move;">
+                        <div id="floor0" class="floor-position-1">
+                            <img src="assets/images/floors/pietro1-10.svg" alt="">
                         </div>
-                    </form>
-                    <ul>
-                        <li class="title">a-z-9</li>
-                        <li><button>4F</button></li>
-                        <li><button>50 style</button></li>
-                        <li class="title">a</li>
-                        <li><button>a.</button></li>
-                        <li><button>A.Blikle</button></li>
-                        <li><button>Apart</button></li>
-                        <li><button>Aqua El Zoo</button></li>
-                        <li><button>Arianos</button></li>
-                        <li class="title">b</li>
-                        <li><button>Bacówka</button></li>
-                        <li><button>Betito</button></li>
-                        <li><button>Bierhalle</button></li>
-                        <li><button>Bijou Brigitte</button></li>
-                        <li><button>BOBOQ</button></li>
-                        <li><button>Bonito</button></li>
-                        <li><button>Bumbusie</button></li>
-                        <li><button>Burger King</button></li>
-                        <li><button>Bytom</button></li>
+                        <div id="floor1" class="floor-position-2">
+                            <img src="assets/images/floors/pietro-0-10.svg" alt="">
+                        </div>
+                    </div>
+                    <div data-store-logo="" class="shop-logo">
+                        <img src="assets/images/new_yorker.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="shops-list">
+                    <div class="container-stores">
+                        <form data-search-store action="">
+                            <div class="main-search-box">
+                                <input type="text" name="" id="" placeholder="Wpisz nazwę sklepu">
+                            </div>
+                        </form>
+                        <ul data-list-stores="" class="mCustomScrollbar _mCS_1">
+                            <div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
+                                style="max-height: none;" tabindex="0">
+                                <div id="mCSB_1_container" class="mCSB_container"
+                                    style="position:relative; top:0; left:0;" dir="ltr">
+                                    <li class="title">a-z-9</li>
+                                    <li><button data-open-store="8">4F</button></li>
+                                    <li><button data-open-store="11">50Style</button></li>
+                                    <li class="title">a</li>
+                                    <li><button data-open-store="13">A.Blikle</button></li>
+                                    <li><button data-open-store="213">Allegro</button></li>
+                                    <li><button data-open-store="17">Apart</button></li>
+                                    <li><button data-open-store="131">AQUAEL ZOO</button></li>
+                                    <li><button data-open-store="217">Arcade</button></li>
+                                    <li><button data-open-store="27">Arianos Kebab</button></li>
+                                    <li class="title">b</li>
+                                    <li><button data-open-store="9">Bacówka</button></li>
+                                    <li><button data-open-store="211">Bafra Kebab</button></li>
+                                    <li><button data-open-store="12">Betito</button></li>
+                                    <li><button data-open-store="209">Beza krówka</button></li>
+                                    <li><button data-open-store="193">Bierhalle</button></li>
+                                    <li><button data-open-store="192">Bijou Brigitte</button></li>
+                                    <li><button data-open-store="161">BOBOQ</button></li>
+                                    <li><button data-open-store="191">Bumbusie</button></li>
+                                    <li><button data-open-store="16">Burger King</button></li>
+                                    <li><button data-open-store="20">Bytom</button></li>
+                                    <li class="title">c</li>
+                                    <li><button data-open-store="24">Calzedonia</button></li>
+                                    <li><button data-open-store="30">Camille Albane</button></li>
+                                    <li><button data-open-store="34">Carrefour</button></li>
+                                    <li><button data-open-store="115">CARRY Piętro 0</button></li>
+                                    <li><button data-open-store="202">CARRY Piętro 1</button></li>
+                                    <li><button data-open-store="38">CCC</button></li>
+                                    <li><button data-open-store="187">CHACZAPURI</button></li>
+                                    <li><button data-open-store="186">Cholewiński</button></li>
+                                    <li><button data-open-store="184">Ciasta Domowe R. Gajewski</button></li>
+                                    <li><button data-open-store="15">Cinema City</button></li>
+                                    <li><button data-open-store="18">City Wash</button></li>
+                                    <li><button data-open-store="183">Coccodrillo&nbsp;</button></li>
+                                    <li><button data-open-store="181">CoWork Cafe</button></li>
+                                    <li><button data-open-store="19">Cropp</button></li>
+                                    <li><button data-open-store="180">Cukiernia Sowa</button></li>
+                                    <li><button data-open-store="179">Czas na Herbatę</button></li>
+                                    <li class="title">d</li>
+                                    <li><button data-open-store="178">Dealz</button></li>
+                                    <li><button data-open-store="119">Deichmann</button></li>
+                                    <li><button data-open-store="177">DIVERSE</button></li>
+                                    <li><button data-open-store="176">Douglas</button></li>
+                                    <li><button data-open-store="174">Dreams &amp; Gifts</button></li>
+                                    <li><button data-open-store="173">DUKA</button></li>
+                                    <li class="title">e</li>
+                                    <li><button data-open-store="162">Egurrola Dance Studio</button></li>
+                                    <li><button data-open-store="172">Elite Sport Food</button></li>
+                                    <li><button data-open-store="117">empik</button></li>
+                                    <li><button data-open-store="163">Enel Med</button></li>
+                                    <li><button data-open-store="171">enel-med sklep medyczny</button></li>
+                                    <li><button data-open-store="170">eobuwie.pl</button></li>
+                                    <li><button data-open-store="169">Etam</button></li>
+                                    <li><button data-open-store="76">Excellent Office</button></li>
+                                    <li class="title">f</li>
+                                    <li><button data-open-store="168">Fikołki</button></li>
+                                    <li><button data-open-store="167">Flying Tiger Copenhagen</button></li>
+                                    <li><button data-open-store="166">FONMIX</button></li>
+                                    <li class="title">g</li>
+                                    <li><button data-open-store="138">Galeria Milano</button></li>
+                                    <li><button data-open-store="165">Gatta</button></li>
+                                    <li><button data-open-store="98">Green Caffe Nero</button></li>
+                                    <li><button data-open-store="159">Greenpoint</button></li>
+                                    <li><button data-open-store="210">Grill%Beer</button></li>
+                                    <li><button data-open-store="198">Grycan</button></li>
+                                    <li><button data-open-store="219">Gudi Home</button></li>
+                                    <li><button data-open-store="100">GUESS</button></li>
+                                    <li class="title">h</li>
+                                    <li><button data-open-store="137">H&amp;M Piętro 0</button></li>
+                                    <li><button data-open-store="204">H&amp;M Piętro 1</button></li>
+                                    <li><button data-open-store="156">Hair Styling Team</button></li>
+                                    <li><button data-open-store="126">HalfPrice Piętro 0</button></li>
+                                    <li><button data-open-store="201">HalfPrice Piętro 1</button></li>
+                                    <li><button data-open-store="74">Hebe</button></li>
+                                    <li><button data-open-store="22">home&amp;you</button></li>
+                                    <li><button data-open-store="129">Homla</button></li>
+                                    <li><button data-open-store="199">House</button></li>
+                                    <li class="title">i</li>
+                                    <li><button data-open-store="160">ING Bank Śląski</button></li>
+                                    <li><button data-open-store="158">INGLOT</button></li>
+                                    <li><button data-open-store="212">InPost</button></li>
+                                    <li><button data-open-store="25">Intersport</button></li>
+                                    <li><button data-open-store="157">Intimissimi</button></li>
+                                    <li><button data-open-store="79">Iqos</button></li>
+                                    <li><button data-open-store="144">iSpot</button></li>
+                                    <li><button data-open-store="155">ITAKA</button></li>
+                                    <li class="title">j</li>
+                                    <li><button data-open-store="147">Jankes</button></li>
+                                    <li><button data-open-store="154">JUNIOR</button></li>
+                                    <li class="title">k</li>
+                                    <li><button data-open-store="149">Kantor Exchange Group</button></li>
+                                    <li><button data-open-store="153">KAPPAHL</button></li>
+                                    <li><button data-open-store="142">Karl Lagerfeld</button></li>
+                                    <li><button data-open-store="111">KFC</button></li>
+                                    <li><button data-open-store="152">KODANO Optyk</button></li>
+                                    <li><button data-open-store="150">KRAY-GREY</button></li>
+                                    <li><button data-open-store="120">KUBENZ</button></li>
+                                    <li class="title">l</li>
+                                    <li><button data-open-store="146">LANĈERTO</button></li>
+                                    <li><button data-open-store="221">Lee Cooper</button></li>
+                                    <li><button data-open-store="214">Lodolandia</button></li>
+                                    <li><button data-open-store="86">Lotto</button></li>
+                                    <li><button data-open-store="143">Lynx Optique</button></li>
+                                    <li class="title">m</li>
+                                    <li><button data-open-store="124">M&amp;M Gold</button></li>
+                                    <li><button data-open-store="50">Magia d'italia</button></li>
+                                    <li><button data-open-store="48">MANGO</button></li>
+                                    <li><button data-open-store="141">Martes Sport</button></li>
+                                    <li><button data-open-store="26">mBank</button></li>
+                                    <li><button data-open-store="71">McDonald's</button></li>
+                                    <li><button data-open-store="140">Media Expert</button></li>
+                                    <li><button data-open-store="139">Medicine</button></li>
+                                    <li><button data-open-store="107">Millenium Bank</button></li>
+                                    <li><button data-open-store="136">MOHITO</button></li>
+                                    <li><button data-open-store="135">Monnari</button></li>
+                                    <li><button data-open-store="51">My Shop</button></li>
+                                    <li class="title">n</li>
+                                    <li><button data-open-store="133">NeoNail</button></li>
+                                    <li><button data-open-store="28">New Balance</button></li>
+                                    <li><button data-open-store="29">New Yorker</button></li>
+                                    <li><button data-open-store="132">NEWBIE</button></li>
+                                    <li class="title">o</li>
+                                    <li><button data-open-store="130">OKAIDI</button></li>
+                                    <li><button data-open-store="128">Olimp</button></li>
+                                    <li><button data-open-store="127">Olimp Store</button></li>
+                                    <li><button data-open-store="123">ONLY</button></li>
+                                    <li><button data-open-store="53">Orange</button></li>
+                                    <li class="title">p</li>
+                                    <li><button data-open-store="122">Pako Lorente</button></li>
+                                    <li><button data-open-store="43">PANDORA</button></li>
+                                    <li><button data-open-store="55">Paris Optique</button></li>
+                                    <li><button data-open-store="57">Pasmanteria Szpileczka</button></li>
+                                    <li><button data-open-store="121">PEPCO</button></li>
+                                    <li><button data-open-store="104">Pizza Hut</button></li>
+                                    <li><button data-open-store="97">Play</button></li>
+                                    <li><button data-open-store="220">Pocket store</button></li>
+                                    <li><button data-open-store="69">Poczta Polska</button></li>
+                                    <li><button data-open-store="118">Pralnia EBS</button></li>
+                                    <li><button data-open-store="116">PUCCINI</button></li>
+                                    <li><button data-open-store="114">Puma</button></li>
+                                    <li class="title">q</li>
+                                    <li><button data-open-store="45">QUIOSQUE</button></li>
+                                    <li class="title">r</li>
+                                    <li><button data-open-store="113">Rainbow</button></li>
+                                    <li><button data-open-store="112">Recman</button></li>
+                                    <li><button data-open-store="92">Reserved Piętro 0</button></li>
+                                    <li><button data-open-store="200">Reserved Piętro 1</button></li>
+                                    <li><button data-open-store="72">Rossmann</button></li>
+                                    <li><button data-open-store="66">RTV Euro AGD</button></li>
+                                    <li><button data-open-store="110">Ryłko</button></li>
+                                    <li class="title">s</li>
+                                    <li><button data-open-store="101">Saffiano</button></li>
+                                    <li><button data-open-store="68">Salad Story</button></li>
+                                    <li><button data-open-store="106">Samsung Brand Store</button></li>
+                                    <li><button data-open-store="10">Santander Bank Polska</button></li>
+                                    <li><button data-open-store="109">Sephora</button></li>
+                                    <li><button data-open-store="105">Shizen</button></li>
+                                    <li><button data-open-store="103">Sinsay Piętro 0</button></li>
+                                    <li><button data-open-store="203">Sinsay Piętro 1</button></li>
+                                    <li><button data-open-store="61">Sizeer</button></li>
+                                    <li><button data-open-store="60">Smoke</button></li>
+                                    <li><button data-open-store="89">SMYK</button></li>
+                                    <li><button data-open-store="96">Sony Centre</button></li>
+                                    <li><button data-open-store="58">Starbucks</button></li>
+                                    <li><button data-open-store="95">SUBWAY</button></li>
+                                    <li><button data-open-store="93">Super-Pharm</button></li>
+                                    <li class="title">Ś</li>
+                                    <li><button data-open-store="32">Świat Książki</button></li>
+                                    <li class="title">s</li>
+                                    <li><button data-open-store="91">SWISS</button></li>
+                                    <li class="title">t</li>
+                                    <li><button data-open-store="64">T-Mobile</button></li>
+                                    <li><button data-open-store="90">TATUUM</button></li>
+                                    <li><button data-open-store="218">Tchibo</button></li>
+                                    <li><button data-open-store="88">Tea&amp;Tea</button></li>
+                                    <li><button data-open-store="208">Telakces.com Piętro 0</button></li>
+                                    <li><button data-open-store="185">Telakces.com Piętro 1</button></li>
+                                    <li><button data-open-store="87">Tescoma</button></li>
+                                    <li><button data-open-store="85">Thai Wok</button></li>
+                                    <li><button data-open-store="205">The Beer Store</button></li>
+                                    <li><button data-open-store="65">The North Face</button></li>
+                                    <li><button data-open-store="83">Time for Wax&nbsp;</button></li>
+                                    <li><button data-open-store="81">TIMETREND</button></li>
+                                    <li><button data-open-store="82">TK Maxx</button></li>
+                                    <li><button data-open-store="80">TOUS</button></li>
+                                    <li><button data-open-store="78">Triumph</button></li>
+                                    <li><button data-open-store="77">TUI</button></li>
+                                    <li class="title">u</li>
+                                    <li><button data-open-store="75">Unisono</button></li>
+                                    <li class="title">v</li>
+                                    <li><button data-open-store="36">Vanila</button></li>
+                                    <li><button data-open-store="73">VENEZIA</button></li>
+                                    <li><button data-open-store="59">Vision Express</button></li>
+                                    <li><button data-open-store="33">Vissavi</button></li>
+                                    <li><button data-open-store="70">VISTULA</button></li>
+                                    <li><button data-open-store="67">vuse inspiration store</button></li>
+                                    <li class="title">w</li>
+                                    <li><button data-open-store="37">W.KRUK</button></li>
+                                    <li><button data-open-store="63">Wakacje.pl</button></li>
+                                    <li><button data-open-store="62">Winestory</button></li>
+                                    <li><button data-open-store="56">WITTCHEN</button></li>
+                                    <li><button data-open-store="42">Wojas</button></li>
+                                    <li><button data-open-store="49">Wólczanka</button></li>
+                                    <li><button data-open-store="47">Wrangler</button></li>
+                                    <li><button data-open-store="46">Wyjątkowy Prezent</button></li>
+                                    <li class="title">x</li>
+                                    <li><button data-open-store="41">X-kom</button></li>
+                                    <li class="title">y</li>
+                                    <li><button data-open-store="39">YES</button></li>
+                                    <li><button data-open-store="44">Yves Rocher</button></li>
+                                    <li class="title">Ż</li>
+                                    <li><button data-open-store="31">Żabka</button></li>
+                                    <li class="title">z</li>
+                                    <li><button data-open-store="40">Zdrofit</button></li>
+                                    <li><button data-open-store="35">ZIAJA</button></li>
+                                </div>
+                                <div id="mCSB_1_scrollbar_vertical"
+                                    class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical"
+                                    style="display: block;">
+                                    <div class="mCSB_draggerContainer">
+                                        <div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
+                                            style="position: absolute; min-height: 175px; display: block; height: 52px; max-height: 715px; top: 0px;">
+                                            <div class="mCSB_dragger_bar" style="line-height: 175px;"></div>
+                                        </div>
+                                        <div class="mCSB_draggerRail"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="shop-details" data-shop-details>
+                        <div class="top">
+                            <h3 class="title">New Yorker</h3>
+                            <p class="subtitle">moda</p>
+                            <div class="desc">
+                                <p>New Yorker należy do liderów europejskiej branży odzieżowej w segmencie Young
+                                    Fashion. Posiada ponad 1000 lokalizacji w 40 krajach na świecie, w których oferuje
+                                    swoim klientom najnowsze trendy w modzie.</p>
+                                <p>Kolekcje tworzą marki własne FSBN, FB SISTER (odzież sportowa i streetwear) AMISU i
+                                    SMOG (styl klasyczny i odzież wieczorowa) jak również CENSORED (bielizna i stroje
+                                    kąpielowe), oraz marka ACCESSOIRES pełną wyróżniających się dodatków.</p>
+                                <p>Z New Yorker żaden trend Cię nie ominie. Zgodnie z mottem „Dress for the moment“
+                                    znajdziesz tu perfekcyjny outfit na każdą okazje.</p>
+                            </div>
+                            <button class="close" data-store-close="">
+                                <img src="assets/images/icon-close.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="bottom">
+                            <div class="qr-code">
+                                <img src="assets/images/qr-code.svg" alt="">
+                            </div>
+                            <div class="buttons">
+                                <a href="" class="button">Wyznacz trasę</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="categories">
+                    <p class="title">Pokaż według kategorii</p>
+                    <ul class="list">
+                        <li><button>AGD & RTV</button></li>
+                        <li><button>Artykuły spożywcze</button></li>
+                        <li class="current"><button>Moda</button></li>
+                        <li><button>Biżuteria</button></li>
+                        <li><button>Prasa & Multimedia</button></li>
+                        <li><button>Obuwie & torby</button></li>
+                        <li><button>Restauracje i kawiarnie</button></li>
+                        <li><button>Rozrywka</button></li>
+                        <li><button>Sport i hobby</button></li>
+                        <li><button>Dzieci</button></li>
+                        <li><button>Usługi</button></li>
+                        <li><button>Wnętrza i wyposażenie</button></li>
+                        <li><button>Zdrowie u uroda</button></li>
+                        <li><button>Inne</button></li>
                     </ul>
-            </div>
-            <div class="categories">
-                <p class="title">Pokaż według kategorii</p>
-                <ul class="list">
-                    <li><button>AGD & RTV</button></li>
-                    <li><button>Artykuły spożywcze</button></li>
-                    <li class="current"><button>Moda</button></li>
-                    <li><button>Biżuteria</button></li>
-                    <li><button>Prasa & Multimedia</button></li>
-                    <li><button>Obuwie & torby</button></li>
-                    <li><button>Restauracje i kawiarnie</button></li>
-                    <li><button>Rozrywka</button></li>
-                    <li><button>Sport i hobby</button></li>
-                    <li><button>Dzieci</button></li>
-                    <li><button>Usługi</button></li>
-                    <li><button>Wnętrza i wyposażenie</button></li>
-                    <li><button>Zdrowie u uroda</button></li>
-                    <li><button>Inne</button></li>
-                </ul>
+                </div>
             </div>
         </div>
     </main>
-
+    <div id="keyboard" class="hidden keyboard"><ul class="jkeyboard"><li class="jline"><ul><li class="jkey letter">q</li><li class="jkey letter">w</li><li class="jkey letter">e</li><li class="jkey letter">r</li><li class="jkey letter">t</li><li class="jkey letter">y</li><li class="jkey letter">u</li><li class="jkey letter">i</li><li class="jkey letter">o</li><li class="jkey letter">p</li></ul></li><li class="jline"><ul><li class="jkey letter">a</li><li class="jkey letter">s</li><li class="jkey letter">d</li><li class="jkey letter">f</li><li class="jkey letter">g</li><li class="jkey letter">h</li><li class="jkey letter">j</li><li class="jkey letter">k</li><li class="jkey letter">l</li></ul></li><li class="jline"><ul><li class="jkey shift">&nbsp;</li><li class="jkey letter">z</li><li class="jkey letter">x</li><li class="jkey letter">c</li><li class="jkey letter">v</li><li class="jkey letter">b</li><li class="jkey letter">n</li><li class="jkey letter">m</li><li class="jkey backspace">&nbsp;</li></ul></li><li class="jline"><ul><li class="jkey numeric_switch">123</li><li class="jkey layout_switch">&nbsp;</li><li class="jkey space">&nbsp;</li><li class="jkey return">Enter</li></ul></li></ul><button data-close-keyboard="" class="close"></button><button data-close-keyboard="" class="close"></button></div>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    
-    <!-- Slick Slider -->
-    <script type="text/javascript" src="assets/slick/slick/slick.js"></script>
 
-    <script src="assets/scripts/main.js"></script>
+    <script src="assets/scripts/application.js"></script>
 </body>
-</html> 
+
+</html>

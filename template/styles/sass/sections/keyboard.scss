@@ -1,0 +1,69 @@
+.jkeyboard{
+    .jline{
+        ul{
+            li{
+                font-family: 'Poppins', sans-serif;
+                background: #fff;
+                color: #222;
+                border: none;
+                box-shadow: none;
+                border-radius: 10px;
+                width: 60px;
+                height: 60px;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 60px;
+
+                &:hover{
+                    background: #fff;
+                }
+
+                &.backspace,
+                &.shift,
+                &.layout_switch{
+                    background-color: #fff;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                &.backspace{
+                    background-image: url(../../images/delete_icon.svg);
+                    background-size: 25px;
+                }
+
+                &.shift{
+                    background-image: url(../../images/arrowup_icon.svg);
+                    background-size: 18px;
+
+                }
+
+                &.layout_switch{
+                    background-image: url(../../images/keyboard_icon.svg);
+                    background-size: 30px;
+                }
+            }
+        }
+    }
+}
+.keyboard{
+    .close{
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(../../images/close_icon.svg);
+        background-size: 18px;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        font-family: 'Poppins', sans-serif;
+        color: #222;
+        border: none;
+        box-shadow: none;
+        border-radius: 10px;
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 60px;
+    }
+}

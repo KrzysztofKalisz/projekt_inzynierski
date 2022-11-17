@@ -1,0 +1,123 @@
+.news{
+    @include transition;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 122px);
+    
+    .mCustomScrollbar{
+        height: calc(100vh - 105px - 63px - 122px);
+        margin: 63px 40px 0 80px;
+    }
+    
+    .list{
+        // height: calc(100vh - 105px - 63px - 122px);
+        display: flex;
+        flex-wrap: wrap;
+        // margin: 63px 40px 0 80px;
+        // overflow-y: auto;
+        padding: 0 53px 0 0;
+        
+        // &::-webkit-scrollbar {
+        //     display: none;
+        // }
+        &::-webkit-scrollbar {
+            width: 3px;
+            border-radius: 2px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+            border: 1px solid rgba(0,0,0,.33);
+            border-radius: 2px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #000000;
+            border-radius: 2px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: #000000;
+        }
+
+        &::before{
+            content: '';
+            position: fixed;
+            left: 0;
+            bottom: 105px;
+            width: 100%;
+            height: 162px;
+            background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        }
+
+        .item{
+            width: calc(25% - 52.5px);
+            margin: 0 35px 57px;
+
+
+            &:first-child{
+                margin-left: 0;
+            }
+            
+            &:nth-child(4n){
+                margin-right: 0;
+            }
+            
+            &:nth-child(4n + 1){
+                margin-left: 0;
+            }
+            
+            .image{
+                box-shadow: 0 3px 30px 0 rgba(0,0,0,.05);
+                height: 225px;
+                border: 1px solid #E3E3E3;
+                border-radius: 5px;
+                margin: 0 0 25px;
+                background: #fff;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+                }
+            }
+
+            .title{
+                overflow-wrap: break-word;
+                @include font16(700);
+            }
+        }
+    }
+
+
+    .mCSB_scrollTools{
+        opacity: 1;
+        width: 3px;
+
+        .mCSB_dragger{
+            height: 175px!important;
+            width: 3px;
+            border-radius: 2px;
+            opacity: 1;
+            background: #000;
+
+            .mCSB_dragger_bar{
+                background: #000!important;
+                border-radius: 2px;    
+            }
+        }
+
+        .mCSB_draggerRail{
+            background-color: transparent;
+            border: 1px solid rgba(0, 0, 0, 0.33);
+            border-radius: 2px;
+            width: 3px;
+        }
+    }
+
+    .button{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 38px;
+    }
+}

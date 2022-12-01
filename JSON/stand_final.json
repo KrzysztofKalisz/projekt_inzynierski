@@ -1,0 +1,355 @@
+{
+    "stand": "pg_pi",
+    "slug": "pg_pi",
+    "stand_id": "1",
+    "default_floor_id": "1",
+    "default_floor_name": "1",
+    "stores": [
+        {
+            "id": 8,
+            "name": "4F",
+            "category": "Moda",
+            "category_id": 3,
+            "description":
+                "\u003Cp\u003E4F to marka, kt\u0026oacute;ra oferuje wysokiej klasy odzie\u017c i\u0026nbsp;akcesoria sportowe. Jej znakiem rozpoznawczym jest kombinacja jako\u015bci, technologii oraz modnych materia\u0142\u0026oacute;w z\u0026nbsp;nowoczesnym designem. Produkty 4F nadaj\u0105 si\u0119 zar\u0026oacute;wno do treningu, jak i\u0026nbsp;codziennego noszenia.\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.: \u003Cspan\u003E+48 727 021 806\u003C/span\u003E\u003C/p\u003E",
+            "icon": "/images/thumb/20220513074005_128_4f_main.png?ver=20221201174457",
+            "qr": "/images/medium/20220513074311_437_4F.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": "INVALID",
+        },
+        {
+            "id": 11,
+            "name": "50Style",
+            "category": "Moda",
+            "category_id": 3,
+            "description":
+                "\u003Cp\u003EIt\u0026rsquo;s #bettertogether! Je\u015bli cenisz sobie aktywny czas sp\u0119dzony w gronie znajomych, mamy dla Ciebie super wie\u015bci! U nas znajdziesz najlepszej jako\u015bci produkty, kt\u0026oacute;re jeszcze bardziej uprzyjemni\u0105 Ci codzienne aktywno\u015bci. B\u0105d\u017amy w tym razem!\u0026nbsp;\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.: 785 852 643\u003C/p\u003E",
+            "icon": "/images/thumb/20220513074821_54_50-style_main.jpeg?ver=20221201174457",
+            "qr": "/images/medium/20220513075047_44_50.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": "INVALID"
+        },
+        {
+            "id": 13,
+            "name": "A.Blikle",
+            "category": "Restauracje i kawiarnie",
+            "category_id": 4,
+            "description":
+                "\u003Cp\u003EA.Blikle to najbardziej rozpoznawalna marka cukiernicza i\u0026nbsp;jednocze\u015bnie najstarsza cukiernia w\u0026nbsp;Polsce. Firma zosta\u0142a za\u0142o\u017cona w\u0026nbsp;1869 przez Antoniego Kazimierza Bliklego. Od blisko 150 lat .\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;11:00 - 21:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;11:00 - 21:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;11:00 - 20:00\u003Cbr /\u003E\r\nNiedz. niehandlowa:\u0026nbsp;-\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;\u003Cspan\u003E607 755 513\u003C/span\u003E\u003C/p\u003E",
+            "icon": "/images/thumb/20220513075336_456_a-dot-blikle_main.png?ver=20221201174457",
+            "qr": "/images/medium/20220513075516_179_blike.png",
+            "floor_id": 6,
+            "floor_name": "-2",
+            "wayfinding_by": null
+        },
+        {
+            "id": 213,
+            "name": "Allegro",
+            "category": "Inne",
+            "category_id": 13,
+            "description":
+                "\u003Cp\u003EPaczkomat znajduje si\u0119 obok parkingu zewn\u0119trznego Galerii P\u0026oacute;\u0142nocnej, przy ul. Trakt Nadwi\u015bla\u0144ski.\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;24h/7dni\u003Cbr /\u003E\r\nSobota:\u0026nbsp;24h/7dni\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;24h/7dni\u003Cbr /\u003E\r\nNiedz. niehandlowa:\u0026nbsp;24h/7dni\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.: -\u003C/p\u003E",
+            "icon": "/images/thumb/20220713111135_291_Allegro_logo.png?ver=20221201174457",
+            "qr": "/images/medium/20220713112624_435_allegro.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        },
+        {
+            "id": 17,
+            "name": "Apart",
+            "category": "Bi\u017cuteria",
+            "category_id": 8,
+            "description":
+                "\u003Cp\u003EApart to marka od ponad czterech dekad obecna na polskim rynku i\u0026nbsp;od lat to w\u0142a\u015bnie do niej nale\u017cy pozycja lidera w\u0026nbsp;bran\u017cy jubilerskiej.\u0026nbsp;\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C/p\u003E\r\n\r\n\u003Cdiv class=\u0022store-details-box-wrapper col-sm-4 col-xs-12\u0022\u003E\r\n\u003Cdiv class=\u0022store-details-box opening-hours\u0022\u003E\r\n\u003Cdiv\u003E\r\n\u003Cp\u003ETel.: \u003Cspan\u003E+48 22 812 83 11\u003C/span\u003E\u003C/p\u003E\r\n\u003C/div\u003E\r\n\u003C/div\u003E\r\n\u003C/div\u003E",
+            "icon": "/images/thumb/20220513075918_411_apart_main.png?ver=20221201174457",
+            "qr": "/images/medium/20220513080230_168_apart.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": null
+        },
+        {
+            "id": 131,
+            "name": "AQUAEL ZOO",
+            "category": "Inne",
+            "category_id": 13,
+            "description":
+                "\u003Cp\u003ESklepy AQUAELZOO, to polska sie\u0107 sklep\u0026oacute;w zoologicznych z\u0026nbsp;personelem, dla kt\u0026oacute;rego has\u0142o \u0026quot;Kochamy zwierz\u0119ta\u0026quot; nie jest tylko pustym s\u0142owami. Misj\u0105 sklep\u0026oacute;w AQUAELZOO jest pomoc ka\u017cdemu mi\u0142o\u015bnikowi zwierz\u0105t w\u0026nbsp;doborze rozwi\u0105za\u0144 optymalnych dla jego pupila.\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.: +48 22 462 67 64\u003C/p\u003E",
+            "icon": "/images/thumb/20220516105254_27_aquael-zoo_main.png?ver=20221201174457",
+            "qr": "/images/medium/20220516105530_92_aquael.png",
+            "floor_id": 6,
+            "floor_name": "-2",
+            "wayfinding_by": null
+        },
+        {
+            "id": 217,
+            "name": "Arcade \u2013 Centrum Rozrywki P\u00f3\u0142nocna",
+            "category": "Rozrywka",
+            "category_id": 10,
+            "description":
+                "\u003Cp\u003ECentrum Rozrywki P\u0026oacute;\u0142nocna to znakomicie sp\u0119dzony czas na zabawie dla dzieci jak i\u0026nbsp;doros\u0142ych. Mog\u0105 Pa\u0144stwo skorzysta\u0107 z\u0026nbsp;wielu typu atrakcji takich jak symulatory, bujaki, cymbergaje, gry zr\u0119czno\u015bciowe oraz automaty biletowe (w ramach programu lojalno\u015bciowego za bilety mo\u017cna uzyska\u0107 nagrody). Serdecznie zapraszamy oraz przypominamy o\u0026nbsp;atrakcyjnych pakietach bonusowych, kt\u0026oacute;re mo\u017cna naby\u0107 w\u0026nbsp;rozmieniarkach do \u017ceton\u0026oacute;w na wej\u015bciu.\u0026nbsp;\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u0026nbsp;\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003Cbr /\u003E\r\nNiedz. niehandlowa:\u0026nbsp;10:00 - 21:00\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.: 660885187\u003C/p\u003E",
+            "icon": "/images/thumb/20220916122723_210_arcade-centrum-rozrywki-polnocna_main.png?ver=20221201174457",
+            "qr": null,
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": "INVALID"
+        },
+        {
+            "id": 27,
+            "name": "Arianos Kebab",
+            "category": "Restauracje i kawiarnie",
+            "category_id": 4,
+            "description":
+                "\u003Cp\u003EW restauracji Arianos Kebab\u0026nbsp;macie Pa\u0144stwo mo\u017cliwo\u015b\u0107 zjedzenia \u015bwie\u017cych da\u0144 kuchni orientalnej z\u0026nbsp;najwy\u017cszej jako\u015bci sk\u0142adnik\u0026oacute;w.\u0026nbsp;\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003Cbr /\u003E\r\nNiedz. niehandlowa:\u0026nbsp;10:00 - 21:00\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u003Cstrong\u003E\u0026nbsp;\u003C/strong\u003E\u003Cspan\u003E606 639 760\u003C/span\u003E\u003C/p\u003E",
+            "icon": "/images/thumb/20220513080926_399_arianos-doner-kebab_main.jpeg?ver=20221201174457",
+            "qr": "/images/medium/20220513081113_15_kebab.png",
+            "floor_id": 5,
+            "floor_name": "2",
+            "wayfinding_by": "INVALID"
+        },
+        {
+            "id": 9,
+            "name": "Bac\u00f3wka",
+            "category": "Spo\u017cywcze",
+            "category_id": 12,
+            "description":
+                "\u003Cp\u003ENajlepsze w\u0119dliny tradycyjne oraz produkty garma\u017ceryjne z\u0026nbsp;w\u0142asnej spi\u017carni \u0026ndash;\u0026nbsp;Bac\u0026oacute;wka Towary Tradycyjne.\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;10:00 - 21:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 21:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;+48 606 461 226\u003C/p\u003E",
+            "icon": "/images/thumb/20220513073759_180_bacowka_main.jpeg?ver=20221201174457",
+            "qr": "/images/medium/20220513074148_388_bacwka.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": null
+        },
+        {
+            "id": 211,
+            "name": "Bafra Kebab",
+            "category": "Restauracje i kawiarnie",
+            "category_id": 4,
+            "description":
+                "\u003Cp\u003EBafra Kebab stawia przede wszystkim na jako\u015b\u0107 rodem z\u0026nbsp;restauracji. Na wyj\u0105tkowy smak kebab\u0026oacute;w wp\u0142ywa mi\u0119so przygotowane specjalnie dla sieci, \u015bwie\u017ce, soczyste warzywa od lokalnych dostawc\u0026oacute;w oraz autorskie sosy tworzone na bazie zi\u0026oacute;\u0142.\u003Cbr /\u003E\r\nBafra Kebab znajduje si\u0119 na zewn\u0105trz galerii, w\u0026nbsp;pobli\u017cu fontanny od ul. \u015awiatowida.\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;11:00-21:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;11:00-21:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;11:00-20:00\u003Cbr /\u003E\r\nNiedz. niehandlowa:\u0026nbsp;11:00-20:00\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u0026nbsp;Tel.: 791 175 361\u003C/p\u003E",
+            "icon": "/images/thumb/20220713111135_295_bafra-kebab_main.png?ver=20221201174457",
+            "qr": "/images/medium/20220713112400_331_bafra_kebab.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        },
+        {
+            "id": 12,
+            "name": "Betito",
+            "category": "Dzieci",
+            "category_id": 5,
+            "description":
+                "\u003Cp\u003EDla Pa\u0144stwa starannie wyselekcjonowali\u015bmy marki dzieci\u0119ce, aby m\u0026oacute;c zaoferowa\u0107 odzie\u017c, kt\u0026oacute;ra jest perfekcyjnie skrojona i\u0026nbsp;uszyta z\u0026nbsp;doskona\u0142ej jako\u015bci materia\u0142\u0026oacute;w. W\u0026nbsp;naszym sklepie znajdziecie Pa\u0144stwo\u0026nbsp; oryginalne kolekcje ubranek dla swoich pociech odpowiednie dla danej pory roku.\u0026nbsp;\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.: +48 502 310 143\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u0026nbsp;\u003C/p\u003E",
+            "icon": "/images/thumb/20220513075153_206_betito_main.jpeg?ver=20221201174457",
+            "qr": "/images/medium/20220513075340_499_betito.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        },
+        {
+            "id": 209,
+            "name": "Beza kr\u00f3wka",
+            "category": "Restauracje i kawiarnie",
+            "category_id": 4,
+            "description":
+                "\u003Cp\u003EMiejsce, w\u0026nbsp;kt\u0026oacute;rym zakosztujesz samych naturalnych pyszno\u015bci m.in.: \u0026nbsp;lody rzemie\u015blnicze\u0026nbsp;Beza Kr\u0026oacute;wka\u0026nbsp;-\u0026nbsp;Ich\u0026nbsp;niepowtarzalny smak\u0026nbsp;uzyskiwany jest dzi\u0119ki starym, tradycyjnym w\u0142oskim recepturom i\u0026nbsp;rzemie\u015blniczej metodzie wytwarzania,\u003Cstrong\u003E\u0026nbsp;\u003C/strong\u003Eprzepyszne\u0026nbsp;desery, ciasta, bezy, prawdziwa w\u0142oska kawa\u0026nbsp;Attibassi\u0026nbsp;z prawie 100-letni\u0105 tradycja prosto z\u0026nbsp;Bolonii\u0026nbsp;, frappuccino czy naturalne lemoniady.\u0026nbsp;\u0026nbsp;A wszystko to w\u0026nbsp;otoczeniu natury, kwiat\u0026oacute;w, w\u0026nbsp;klimatycznym, nastrojowym miejscu.\u003C/p\u003E\r\n\r\n\u003Cp\u003EKawiarnia znajduje si\u0119 w\u0026nbsp;ogrodzie na dachu galerii na drugim pi\u0119trze.\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003C!-- x-tinymce/html --\u003E\u003Cstrong\u003EBeza Kr\u0026oacute;wka jest nieczynna w najzimniejszych miesi\u0105cach, zapraszamy ponownie od maja.\u003C/strong\u003E\u003C/p\u003E",
+            "icon": "/images/thumb/20220713111135_279_Beza_Krowka.png?ver=20221201174457",
+            "qr": "/images/medium/20220713111225_417_20220706103350_30_beza_krowka.png",
+            "floor_id": 5,
+            "floor_name": "2",
+            "wayfinding_by": "INVALID"
+        },
+        {
+            "id": 193,
+            "name": "Bierhalle",
+            "category": "Restauracje i kawiarnie",
+            "category_id": 4,
+            "description":
+                "\u003Cp\u003EBierhalle to oryginalne po\u0142\u0105czenie\u0026nbsp;\u0026nbsp; minibrowaru z\u0026nbsp;restauracj\u0105. Tylko tutaj mo\u017cecie zaobserwowa\u0107 proces warzenia piwa dzi\u0119ki unikatowej warzelni wykonanej ze szk\u0142a.\u0026nbsp; Piwo\u0026nbsp; w\u0026nbsp;Bierhalle wytwarzane jest zgodnie z\u0026nbsp;edyktem Reinheitsgebot (Prawo Czysto\u015bci) z\u0026nbsp;1516 roku.\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003Cbr /\u003E\r\nNiedz. niehandlowa:\u0026nbsp;12:00 - 21:00\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.: (22) 812 83 50/ 515 492 962\u003C/p\u003E",
+            "icon": "/images/thumb/20220517083946_170_bierhalle-browar-restauracja_main.png?ver=20221201174457",
+            "qr": "/images/medium/20221123105330_479_bierhalle.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": null
+        },
+        {
+            "id": 192,
+            "name": "Bijou Brigitte",
+            "category": "Bi\u017cuteria",
+            "category_id": 8,
+            "description":
+                "\u003Cp\u003EBijou Brigitte\u0026nbsp;-\u0026nbsp;jako lider na rynku sztucznej bi\u017cuterii i\u0026nbsp;akcesori\u0026oacute;w, prowadzimy dla Pa\u0144stwa okolo 1050 sklep\u0026oacute;w w\u0026nbsp;Europie, w\u0026nbsp;ponad 20 krajach.Ju\u017c od ponad 50 lat dostarczamy naszym klientom niedo\u015bcignionych prze\u017cy\u0107 w\u0026nbsp;\u015bwiecie modnej bi\u017cuterii i\u0026nbsp;akcesori\u0026oacute;w.\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.: +48 22 431 86 12\u003C/p\u003E",
+            "icon": "/images/thumb/20220517083722_454_bijou-brigitte_main.jpeg?ver=20221201174457",
+            "qr": "/images/medium/20220517083759_168_https___www.bijou-brigitte.com_.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": null
+        },
+        {
+            "id": 161,
+            "name": "BOBOQ",
+            "category": "Restauracje i kawiarnie",
+            "category_id": 4,
+            "description":
+                "\u003Cp\u003EBOBOQ to unikatowe bubble tea, z\u0026nbsp;wy\u0142\u0105cznie naturalnych produkt\u0026oacute;w, kt\u0026oacute;re skomponujesz wg w\u0142asnego uznania: na bazie zielonej herbaty, mleka lub jogurtu, z\u0026nbsp;rewelacyjnymi i\u0026nbsp;oryginalnymi dodatkami, jakimi s\u0105: naturalne soki owocowe, kuleczki tapioki, popping boba \u0026ndash;\u0026nbsp;molekularne kulki wype\u0142nione smakowitym sokiem owocowym.\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003Cbr/\u003E\r\nNiedz. niehandlowa:\u0026nbsp;-\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.: 692 014 759\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u0026nbsp;\u003C/p\u003E",
+            "icon": "/images/thumb/20220516145746_246_boboq_main.png?ver=20221201174457",
+            "qr": "/images/medium/20220516145908_379_babeq.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": null
+        },
+        {
+            "id": 191,
+            "name": "Bumbusie",
+            "category": "Dzieci",
+            "category_id": 5,
+            "description":
+                "\u003Cp\u003EBumbusie\u0026nbsp;to multimedialne \u0026nbsp;autka zakupowe polskiej firmy AnGoland. Zosta\u0142y zaprojektowane specjalnie dla maluch\u0026oacute;w. Pe\u0142ni\u0105 funkcj\u0119 rozrywkow\u0105 i\u0026nbsp;edukacyjn\u0105.\u003C/p\u003E\r\n\r\n\u003Cp\u003ECENNIK:\u003Cbr /\u003E\r\nponiedzia\u0142ek - pi\u0105tek: 15z\u0142\u003Cbr /\u003E\r\n(na nieograniczony czas)\u003Cbr /\u003E\r\nsobota - niedziela: 20z\u0142\u003Cbr /\u003E\r\n(na nieograniczony czas)\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003Cbr /\u003E\r\nNiedz. niehandlowa:\u0026nbsp;10:00 - 21:00\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.: +48 510\u0026nbsp;683 509\u003C/p\u003E",
+            "icon": "/images/thumb/20220517083454_167_bumbusie_main.jpeg?ver=20221201174457",
+            "qr": "/images/medium/20220517083523_226_https___bumbusie.pl_.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        },
+        {
+            "id": 16,
+            "name": "Burger King",
+            "category": "Restauracje i kawiarnie",
+            "category_id": 4,
+            "description":
+                "\u003Cp\u003EKa\u017cdego dnia ponad 11 milion\u0026oacute;w Go\u015bci odwiedza restauracje BURGER KING\u0026reg; na ca\u0142ym \u015bwiecie. Jest to zas\u0142uga wykonanych z\u0026nbsp;najwy\u017cszej jako\u015bci sk\u0142adnik\u0026oacute;w, pysznych burger\u0026oacute;w w\u0026nbsp;rozs\u0105dnych cenach.\u0026nbsp;\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia\u003C/strong\u003E:\u003Cbr /\u003E\r\nPn - pt: 10:00-22:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003Cbr /\u003E\r\nNiedz. niehandlowa:\u0026nbsp;12:00 - 21:00\u0026nbsp;\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.: 512-423-523\u0026nbsp;\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u0026nbsp;\u003C/p\u003E",
+            "icon": "/images/thumb/20220513075643_491_burger-king_main.jpeg?ver=20221201174457",
+            "qr": "/images/medium/20220513075458_477_burgerking.png",
+            "floor_id": 5,
+            "floor_name": "2",
+            "wayfinding_by": "INVALID"
+        },
+        {
+            "id": 20,
+            "name": "Bytom",
+            "category": "Moda",
+            "category_id": 3,
+            "description":
+                "\u003Cp\u003EKampania najnowszej kolekcji wiosna-lato 2022 zabiera odbiorc\u0026oacute;w w\u0026nbsp;kolejn\u0105 sentymentaln\u0105 podr\u0026oacute;\u017c, tym razem do nadmorskich kurort\u0026oacute;w, w\u0026nbsp;sezonie obleganych, a\u0026nbsp;poza nim, daj\u0105cych spok\u0026oacute;j i\u0026nbsp;wytchnienie. Wideo zrealizowane przez Marcina Morawickiego oraz sesja zdj\u0119ciowa wykonana przez Kub\u0119 D\u0105browskiego, to filmowe uj\u0119cia przywodz\u0105ce na my\u015bl polskie kino lat 50. i\u0026nbsp;60.\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.: +48 885 231 275\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u0026nbsp;\u003C/p\u003E",
+            "icon": "/images/thumb/20220513080220_79_bytom_main.png?ver=20221201174457",
+            "qr": "/images/medium/20220513080403_75_bytom.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": "INVALID"
+        },
+        {
+            "id": 24,
+            "name": "Calzedonia",
+            "category": "Bielizna",
+            "category_id": 2,
+            "description":
+                "\u003Cp\u003EZa\u0142o\u017cycielska marka Grupy, od kt\u0026oacute;rej pochodzi jej nazwa \u0026ndash;\u0026nbsp;Calzedonia Group, odzwierciedla esencj\u0119 dziedzictwa firmy.\u0026nbsp;Od 1986\u0026nbsp;roku ka\u017cda z\u0026nbsp;kolekcji wyznacza najnowsze trendy w\u0026nbsp;kategoriach\u0026nbsp;po\u0144czosznictwa oraz kostium\u0026oacute;w k\u0105pielowych dla kobiet, m\u0119\u017cczyzn i\u0026nbsp;dzieci.\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp; 519 345 904\u0026nbsp;\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u0026nbsp;\u003C/p\u003E",
+            "icon": "/images/thumb/20220513080711_473_calzedonia_main.png?ver=20221201174457",
+            "qr": "/images/medium/20220513080813_69_calzedonia.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": null
+        },
+        {
+            "id": 30,
+            "name": "Camille Albane",
+            "category": "Us\u0142ugi",
+            "category_id": 11,
+            "description":
+                "\u003Cp\u003ESalon Camille Albane\u0026nbsp;to paryskie trendy, najwy\u017cszej klasy strzy\u017cenia, koloryzacje realizowane francuskimi technikami, piel\u0119gnacje przywracaj\u0105ce w\u0142osom blask, koj\u0105ce zmys\u0142y masa\u017ce.\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;+48 534 865 018\u0026nbsp;\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u0026nbsp;\u003C/p\u003E",
+            "icon": "/images/thumb/20220513081143_287_camille-albane_main.png?ver=20221201174457",
+            "qr": "/images/medium/20220513081420_323_camille.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": null
+        }
+    ],
+    "floors": [
+        { 
+            "id": 1, 
+            "name": "0", 
+            "description": null, 
+            "sketch": ".svg",
+            "position": "0", 
+            "icons": null 
+        },
+        { 
+            "id": 2, 
+            "name": "1", 
+            "description": null, 
+            "sketch": ".svg",
+            "position": "1", 
+            "icons": null 
+        }
+    ],
+    "categories": [
+        {
+            "id": 7,
+            "name": "AGD i RTV",
+            "description": null,
+            "marker_color": "#D5D5D5",
+        },
+        { "id": 17, "name": "Banki", "description": null, "marker_color": "#D5D5D5"},
+        { "id": 2, "name": "Bielizna", "description": null, "marker_color": "#D5D5D5"  },
+        {
+            "id": 8,
+            "name": "Bi\u017cuteria",
+            "description": null,
+            "marker_color": "#D5D5D5"
+        },
+        { "id": 5, "name": "Dzieci", "description": null, "marker_color": "#D5D5D5"},
+        { "id": 13, "name": "Inne", "description": null, "marker_color": "#D5D5D5"},
+        { "id": 3, "name": "Moda", "description": null, "marker_color": "#D5D5D5" },
+        {
+            "id": 14,
+            "name": "Obuwie i torby",
+            "description": null,
+            "marker_color": "#D5D5D5"
+        },
+        {
+            "id": 9,
+            "name": "Prasa i Multimedia",
+            "description": null,
+            "marker_color": "#D5D5D5"
+        },
+        {
+            "id": 4,
+            "name": "Restauracje i kawiarnie",
+            "description": null,
+            "marker_color": "#D5D5D5"
+        },
+        { "id": 10, "name": "Rozrywka", "description": null, "marker_color": "#D5D5D5" },
+        {
+            "id": 15,
+            "name": "Sport i hobby",
+            "description": null,
+            "marker_color": "#D5D5D5",
+            "translations": { "en": { "name": "Sport \u0026 hobby", "description": null }, "ua": { "name": "\u0421\u043f\u043e\u0440\u0442 \u0456 \u0445\u043e\u0431\u0456", "description": null } },
+        },
+        { "id": 12, "name": "Spo\u017cywcze", "description": null, "marker_color": "#D5D5D5" },
+        { "id": 11, "name": "Us\u0142ugi", "description": null, "marker_color": "#D5D5D5"},
+        {
+            "id": 16,
+            "name": "Wn\u0119trza",
+            "description": null,
+            "marker_color": "#D5D5D5"
+        },
+        {
+            "id": 6,
+            "name": "Zdrowie i uroda",
+            "description": null,
+            "marker_color": "#D5D5D5",
+        },
+    ],
+    "toilet": "6",
+    "atm": "4",
+    "settings": 
+    { 
+        "SKETCH_COLORS__ACTIVE_STORE": "#D5D5D5", 
+        "SKETCH_COLORS__NO_ACTIVE_STORE": "#ececec", 
+        "SKETCH_COLORS__ROUTE": "#FF0000" 
+    },
+    "stand_icon": ".svg"
+}

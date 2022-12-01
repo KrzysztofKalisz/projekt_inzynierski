@@ -1,0 +1,47 @@
+{
+    "stand": "pg_pi",
+    "slug": "pg_pi",
+    "stand_id": "1",
+    "default_floor_id": "1",
+    "default_floor_name": "1",
+    "stores": [
+        {
+            "id": 1,
+            "name": "4F",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003E4F to marka, kt\u0026oacute;ra oferuje wysokiej klasy odzie\u017c i\u0026nbsp;akcesoria sportowe. Jej znakiem rozpoznawczym jest kombinacja jako\u015bci, technologii oraz modnych materia\u0142\u0026oacute;w z\u0026nbsp;nowoczesnym designem. Produkty 4F nadaj\u0105 si\u0119 zar\u0026oacute;wno do treningu, jak i\u0026nbsp;codziennego noszenia.\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C/strong\u003E\u003Cbr /\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr /\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C/p\u003E\r\n\r\n\u003Cp\u003ETel.: \u003Cspan\u003E+48 727 021 806\u003C/span\u003E\u003C/p\u003E",
+            "icon": "",
+            "qr": "",
+            "floor_id": 4,
+            "floor_name": "1"
+        }
+    ],
+    "floors": [
+        { 
+            "id": 1, 
+            "name": "1", 
+            "description": null, 
+            "sketch": ".svg",
+            "position": "0", 
+            "icons": null 
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "AGD i RTV",
+            "description": null,
+            "marker_color": "#D5D5D5"
+        }
+    ],
+    "toilet": "6",
+    "atm": "4",
+    "settings": 
+    { 
+        "SKETCH_COLORS__ACTIVE_STORE": "#D5D5D5", 
+        "SKETCH_COLORS__NO_ACTIVE_STORE": "#ececec", 
+        "SKETCH_COLORS__ROUTE": "#FF0000" 
+    },
+    "stand_icon": ".svg"
+}

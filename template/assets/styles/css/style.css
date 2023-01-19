@@ -63,6 +63,7 @@ body, html {
   max-height: 100vh;
   -webkit-tap-highlight-color: transparent;
   font-family: "Poppins", sans-serif;
+  overflow: hidden;
 }
 
 a {
@@ -81,6 +82,21 @@ button {
   cursor: pointer;
 }
 
+.floor_icons {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+body.application-lang-ua .search .main-search .categories .list li button {
+  font-family: "Noto Sans", sans-serif;
+  padding: 0 13px;
+}
+
+.mCSB_inside > .mCSB_container {
+  margin: 0 !important;
+}
+
 .button {
   font-size: 16px;
   font-weight: 700;
@@ -88,20 +104,48 @@ button {
   background: #fff;
   color: #000;
   width: 100%;
+  max-width: 285px;
   text-decoration: none;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
+}
+.button.icon {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: #000;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  height: 53px;
+}
+.button.icon img {
+  margin: 0 25px 0 0;
+}
+.button.only-icon {
+  background-color: #DFDFDF;
+}
+.button.only-icon img {
+  width: 20px;
+}
+
+.back-button {
+  width: 15px;
+  height: 15px;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 999;
 }
 
 header {
   height: 122px;
-}
-header .black-box {
-  height: 25px;
-  width: 100%;
-  background: #1B214B;
 }
 header .floor {
   position: absolute;
@@ -111,6 +155,11 @@ header .floor {
 header .floor h3 {
   font-size: 28px;
   font-weight: 700;
+}
+header .black-box {
+  height: 25px;
+  width: 100%;
+  background: #1B214B;
 }
 
 .keyboard {
@@ -172,7 +221,7 @@ main {
   right: 0;
   margin: auto;
 }
-.map .map-box svg, .map .map-box img {
+.map .map-box svg {
   height: 100%;
   width: 100%;
 }
@@ -249,20 +298,6 @@ main {
   border-radius: 10px;
   background: #fff;
   position: relative;
-}
-.search .main-search .map::before {
-  content: "";
-  position: absolute;
-  top: 40px;
-  left: 46px;
-  z-index: 1000;
-  display: block;
-  width: 63px;
-  height: 48px;
-  background-image: url("../../images/logo-small.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 .search .main-search .map .floor-change-information-as-icon {
   position: absolute;
@@ -375,7 +410,6 @@ main {
   position: absolute;
   top: 30px;
   right: 55px;
-  display: none;
 }
 .search .main-search .map .shop-logo img {
   width: 100%;
@@ -388,10 +422,6 @@ main {
   overflow: hidden;
   width: 100%;
   height: 694px !important;
-  background-image: url("../../images/54321.svg");
-  background-size: 1134px;
-  background-position: 50px 375px;
-  background-repeat: no-repeat;
 }
 .search .main-search .map .map-box > div.floor-position-0 {
   z-index: 12;
@@ -399,11 +429,11 @@ main {
 }
 .search .main-search .map .map-box > div.floor-position-1 {
   z-index: 11;
-  top: -10px;
+  top: 61px;
 }
 .search .main-search .map .map-box > div.floor-position-2 {
   z-index: 10;
-  top: 50px;
+  top: 121px;
 }
 .search .main-search .map .map-box > div.floor-position-3 {
   z-index: 9;
@@ -426,11 +456,11 @@ main {
   transition-delay: 0.6s;
 }
 .search .main-search .map .map-box.active-floor-1 > div.floor-position-1 {
-  top: -10px;
+  top: 61px;
   transition-delay: 0.4s;
 }
 .search .main-search .map .map-box.active-floor-1 > div.floor-position-2 {
-  top: 50px;
+  top: 121px;
   transition-delay: 0.2s;
 }
 .search .main-search .map .map-box.active-floor-1 > div.floor-position-3 {
@@ -446,7 +476,7 @@ main {
   transition-delay: 0.2s;
 }
 .search .main-search .map .map-box.active-floor-2 > div.floor-position-2 {
-  top: 50px;
+  top: 121px;
   transition-delay: 0.4s;
 }
 .search .main-search .map .map-box.active-floor-2 > div.floor-position-3 {
@@ -708,7 +738,6 @@ main {
   border: 1px solid #000;
 }
 .search .mCSB_scrollTools {
-  display: none !important;
   opacity: 1;
   width: 3px;
 }
@@ -767,14 +796,11 @@ main {
   background-size: 30px;
 }
 
-.keyboard {
-  display: none;
-}
 .keyboard .close {
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../../images/icon-close.svg);
+  background-image: url(../../images/close_icon.svg);
   background-size: 18px;
   position: absolute;
   top: 40px;

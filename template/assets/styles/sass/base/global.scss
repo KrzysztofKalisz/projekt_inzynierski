@@ -14,6 +14,7 @@ body, html{
     max-height: 100vh;
     -webkit-tap-highlight-color: transparent;
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 
 a{
@@ -30,4 +31,20 @@ button{
     font-family: 'Poppins', sans-serif;
     background: none;
     cursor: pointer;
+}
+.floor_icons{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+body.application-lang-ua{
+    .search .main-search .categories .list li button{
+        font-family: 'Noto Sans', sans-serif;
+        padding: 0 13px;
+    }
+}
+
+.mCSB_inside > .mCSB_container{
+    margin: 0!important;
 }

@@ -332,7 +332,7 @@
             x = x - 100;
             y = y - 90
 
-            console.log(x, y);
+            // console.log(x, y);
 
 			indicator.setAttribute('transform', 'translate(' + x + ' ' + y + ') scale(' + height / 125 + ')');
 
@@ -342,6 +342,8 @@
 
 		// Extract data from the svg maps
 		function buildDataStore(mapNum, map, el) {
+            console.log('buildDataStore');
+
 			var path,
 				doorId,
 				x1,
@@ -443,6 +445,7 @@
 
 		// after data extracted from all svg maps then build portals between them
 		function buildPortals() {
+            console.log('buildPortals');
 
 			var segmentOuterNum,
 				segmentInnerNum,
@@ -499,6 +502,7 @@
 				}
 			}
 
+
 			//check each path for connections to other paths
 			//checks only possible matchs on same floor, and only for half-1 triangle of search area to speed up search
 			for (mapNum = 0; mapNum < maps.length; mapNum++) {
@@ -550,7 +554,11 @@
 		} // end function buildportals
 
 		//get the set of paths adjacent to a door or endpoint.
+            
+        // console.log(dataStore);
 		function getDoorPaths(door) {
+            console.log('getDoorPaths');
+            
 			var mapNum,
 				pathNum,
 				doorANum,
@@ -559,6 +567,7 @@
 					'paths': [],
 					'floor': null
 				};
+
 
 			for (mapNum = 0; mapNum < maps.length; mapNum++) {
 				for (pathNum = 0; pathNum < dataStore.p[mapNum].length; pathNum++) {
@@ -579,10 +588,14 @@
 			return doorPaths;
 		}
 
+        // console.log(dataStore);
+        
 		function recursiveSearch(segmentType, segmentFloor, segment, length) {
 			//SegmentType is PAth or POrtal, segment floor limits search, segment is id per type and floor, length is total length of current thread
 			// for each path on this floor look at all the paths we know connect to it
 
+            // console.log('recursiveSearch');
+            
 			// for each connection
 			$.each(dataStore.p[segmentFloor][segment].c, function (i, tryPath) {
 				// check and see if the current path is a shorter path to the new path
@@ -634,11 +647,16 @@
 		}
 
 		function generateRoutes() {
+            console.log('generateRoutes');
+
 			var sourceInfo,
 				mapNum,
 				sourcemapNum;
 
+
 			sourceInfo = getDoorPaths(startpoint);
+            // console.log(sourceInfo);
+
 
 			for (mapNum = 0; mapNum < maps.length; mapNum++) {
 				if (maps[mapNum].id === sourceInfo.floor) {
@@ -657,7 +675,10 @@
 
 		// from a given end point generate an array representing the reverse steps needed to reach destination along shortest path
 		function backTrack(segmentType, segmentFloor, segment) {
+            console.log('backTrack');
+
 			var step;
+
 
 			// if we aren't at the startpoint point
 			if (segment !== 'door') {
@@ -679,6 +700,7 @@
 		}
 
 		function getShortestRoute() {
+            console.log('getShortestRoute');
 
 			var destInfo,
 				mapNum,
@@ -686,6 +708,8 @@
 				reversePathStart,
 				minPath,
 				i;
+
+
 
 			destInfo = getDoorPaths(options.endpoint);
 
@@ -695,6 +719,7 @@
 					break;
 				}
 			}
+
 
 			minPath = Infinity;
 			reversePathStart = -1;
@@ -715,7 +740,9 @@
 			return solution;
 		}
 
+
 		function build() {
+            console.log('build');
 
 			dataStore = {
 				'p': [], // paths
@@ -724,6 +751,7 @@
 
 			portalSegments = [];
 
+            // console.log(maps);
 			// Build the dataStore from each map given
 			$.each(maps, function(i, map) {
 				// cleanupSVG(map.el); // commented out as already run by initialize
@@ -739,6 +767,7 @@
 		// Ensure a dataStore exists and is set, whether from a cache
 		// or by building it.
 		function establishDataStore(onReadyCallback) {
+            console.log('establishDataStore');
 
 			if (options.dataStoreCache) {
 				if (typeof options.dataStoreCache === 'object') {
@@ -781,6 +810,8 @@
 		// in that spot, if feature is enabled.
 		// if using dataStores then trigger loading of new datastore.
 		function setStartPoint(point, el) {
+            console.log('setStartPoint');
+            
 			var start,
 				attachPinLocation,
 				x,
@@ -859,6 +890,8 @@
 
 		// Set options based on either provided options or defaults
 		function getOptions(el) {
+            console.log('getOptions');
+
 			var optionsPrior = el.data('wayfinding:options');
 
 			drawing = el.data('wayfinding:drawing'); // load a drawn path, if it exists
@@ -894,6 +927,7 @@
 		} //function getOptions
 
 		function setOptions(el) {
+            console.log('setOptions');
 
 			el.data('wayfinding:options', options);
 			el.data('wayfinding:drawing', drawing);
@@ -902,6 +936,8 @@
 		}
 
 		function cleanupSVG(el) { // should only be called once instead of twice if initalize and build for non datastore
+            console.log('cleanupSVG');
+
 			var svg = $(el).find('svg'),
 				height = parseInt($(svg).attr('height').replace('px', '').split('.')[0], 10),
 				width = parseInt($(svg).attr('width').replace('px', '').split('.')[0], 10);
@@ -945,14 +981,15 @@
 
 		// Hide SVG div, hide path lines (they're data, not visuals), make rooms clickable
 		function activateSVG(el, svgDiv) {
+            console.log('activateSVG');
 
 			// Hide maps until explicitly displayed
 			//$(svgDiv).hide();
 
 			// Hide route information
-			$('#Paths line', svgDiv).attr('stroke-opacity', 0);
-			$('#Doors line', svgDiv).attr('stroke-opacity', 0);
-			$('#Portals line', svgDiv).attr('stroke-opacity', 0);
+			$('#Paths line', svgDiv).attr('stroke-opacity', 1);
+			$('#Doors line', svgDiv).attr('stroke-opacity', 1);
+			$('#Portals line', svgDiv).attr('stroke-opacity', 1);
 
 			// If #Paths, #Doors, etc. are in a group, ensure that group does _not_
 			// have display: none; (commonly set by Illustrator when hiding a layer)
@@ -986,6 +1023,7 @@
 
 		// Called when animatePath() is switching the floor and also when
 		function switchFloor(floor, el) {
+            console.log('switchFloor');
 			var height = $(el).height();
 
 			$(el).height(height); // preserve height as I'm not yet set switching
@@ -1035,6 +1073,7 @@
 		} //function switchFloor
 
 		function hidePath(el) {
+            console.log('hidePath');
 			$('path[class^=directionPath]', el).css({
 				'stroke': 'none'
 			});
@@ -1078,6 +1117,7 @@
 		}
 
 		function animatePath(drawingSegment) {
+            console.log('animatePath');
 			var path,
 				svg,
 				pathRect,
@@ -1227,6 +1267,7 @@
 		// The combined routing function
 		// revise to only interate if startpoint has changed since last time?
 		function routeTo(destination, el) {
+            console.log('routeTo');
 			var i,
 				draw,
 				stepNum,

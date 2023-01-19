@@ -1,352 +1,715 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekt inżynierski</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="./assets/styles/css/jkeyboard.css">
-    <link rel="stylesheet" href="./assets/styles/css/style.css">
-    <link rel="stylesheet" href="fix.css">
-
-    <!-- FONTS -->
+    <title>Studia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;family=Poppins:wght@400;500;600;700;900&amp;family=Noto+Sans:wght@600&amp;display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/styles/css/jkeyboard.css">
+    <link rel="stylesheet" href="assets/styles/css/style.css?ver=20230109183356">
+    <link rel="stylesheet" href="assets/styles/css/fix.css?ver=20230109183356">
 </head>
 
-<body>
+<body cz-shortcut-listen="true">
     <header>
-        <div class="floor">
-            <h3>Poziom 1</h3>
+        <div class="floor" data-lef-label-nav="floor">
+            <h3>
+                <span>Poziom</span>
+                <span data-current-floor-label="">1</span>
+            </h3>
         </div>
         <div class="black-box"></div>
     </header>
-    <main>
+    <main class="search-window" data-main-activity="">
         <div class="search">
             <div class="floors">
-                <p class="label">Poziom</p>
+                <p class="label">
+                    Poziom
+                </p>
                 <div class="list">
-                    <button class="item" data-switch-floor="1">1</button>
-                    <button class="item current" data-switch-floor="2">0</button>
+                    <button data-switch-floor="4" class="item current">1</button>
+                    <button data-switch-floor="3" class="item">0</button>
                 </div>
             </div>
             <div class="main-search">
-                <div class="map">
-                    <div class="map-box active-floor-2" id="sketchContainer"
+                <div class="map" style="overflow: hidden;">
+                    <div class="map-box active-floor-1" id="sketchContainer"
                         style="height: 694px; transform: none; transform-origin: 50% 50% 0px; cursor: move;">
-                        <div id="floor0" class="floor-position-1">
-                            <img src="assets/images/floors/pietro1-10.svg" alt="">
-                        </div>
-                        <div id="floor1" class="floor-position-2">
-                            <img src="assets/images/floors/pietro-0-10.svg" alt="">
-                        </div>
                     </div>
-                    <div data-store-logo="" class="shop-logo">
-                        <img src="assets/images/new_yorker.jpeg" alt="">
-                    </div>
+                    <div class="floor-change-information-as-icon" data-switch-floor-info=""></div>
                 </div>
                 <div class="shops-list">
                     <div class="container-stores">
-                        <form data-search-store action="">
+                        <form data-search-store="" onsubmit="return false">
                             <div class="main-search-box">
-                                <input type="text" name="" id="" placeholder="Wpisz nazwę sklepu">
+                                <input type="text" name="phrase" data-input-keyboard="" maxlength="15" placeholder="Wpisz nazwę sklepu">
                             </div>
                         </form>
-                        <ul data-list-stores="" class="mCustomScrollbar _mCS_1">
-                            <div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"
-                                style="max-height: none;" tabindex="0">
-                                <div id="mCSB_1_container" class="mCSB_container"
+                        <ul data-list-stores="">
+                            <div style="overflow-y: auto;">
+                                <div
                                     style="position:relative; top:0; left:0;" dir="ltr">
                                     <li class="title">a-z-9</li>
                                     <li><button data-open-store="8">4F</button></li>
-                                    <li><button data-open-store="11">50Style</button></li>
-                                    <li class="title">a</li>
-                                    <li><button data-open-store="13">A.Blikle</button></li>
-                                    <li><button data-open-store="213">Allegro</button></li>
-                                    <li><button data-open-store="17">Apart</button></li>
-                                    <li><button data-open-store="131">AQUAEL ZOO</button></li>
-                                    <li><button data-open-store="217">Arcade</button></li>
-                                    <li><button data-open-store="27">Arianos Kebab</button></li>
-                                    <li class="title">b</li>
-                                    <li><button data-open-store="9">Bacówka</button></li>
-                                    <li><button data-open-store="211">Bafra Kebab</button></li>
-                                    <li><button data-open-store="12">Betito</button></li>
-                                    <li><button data-open-store="209">Beza krówka</button></li>
-                                    <li><button data-open-store="193">Bierhalle</button></li>
-                                    <li><button data-open-store="192">Bijou Brigitte</button></li>
-                                    <li><button data-open-store="161">BOBOQ</button></li>
-                                    <li><button data-open-store="191">Bumbusie</button></li>
-                                    <li><button data-open-store="16">Burger King</button></li>
-                                    <li><button data-open-store="20">Bytom</button></li>
-                                    <li class="title">c</li>
-                                    <li><button data-open-store="24">Calzedonia</button></li>
-                                    <li><button data-open-store="30">Camille Albane</button></li>
-                                    <li><button data-open-store="34">Carrefour</button></li>
-                                    <li><button data-open-store="115">CARRY Piętro 0</button></li>
-                                    <li><button data-open-store="202">CARRY Piętro 1</button></li>
-                                    <li><button data-open-store="38">CCC</button></li>
-                                    <li><button data-open-store="187">CHACZAPURI</button></li>
-                                    <li><button data-open-store="186">Cholewiński</button></li>
-                                    <li><button data-open-store="184">Ciasta Domowe R. Gajewski</button></li>
-                                    <li><button data-open-store="15">Cinema City</button></li>
-                                    <li><button data-open-store="18">City Wash</button></li>
-                                    <li><button data-open-store="183">Coccodrillo&nbsp;</button></li>
-                                    <li><button data-open-store="181">CoWork Cafe</button></li>
                                     <li><button data-open-store="19">Cropp</button></li>
-                                    <li><button data-open-store="180">Cukiernia Sowa</button></li>
-                                    <li><button data-open-store="179">Czas na Herbatę</button></li>
-                                    <li class="title">d</li>
-                                    <li><button data-open-store="178">Dealz</button></li>
                                     <li><button data-open-store="119">Deichmann</button></li>
-                                    <li><button data-open-store="177">DIVERSE</button></li>
                                     <li><button data-open-store="176">Douglas</button></li>
-                                    <li><button data-open-store="174">Dreams &amp; Gifts</button></li>
-                                    <li><button data-open-store="173">DUKA</button></li>
-                                    <li class="title">e</li>
-                                    <li><button data-open-store="162">Egurrola Dance Studio</button></li>
-                                    <li><button data-open-store="172">Elite Sport Food</button></li>
                                     <li><button data-open-store="117">empik</button></li>
+                                    <li><button data-open-store="170">eobuwie.pl x Modivo</button></li>
                                     <li><button data-open-store="163">Enel Med</button></li>
                                     <li><button data-open-store="171">enel-med sklep medyczny</button></li>
-                                    <li><button data-open-store="170">eobuwie.pl</button></li>
-                                    <li><button data-open-store="169">Etam</button></li>
-                                    <li><button data-open-store="76">Excellent Office</button></li>
-                                    <li class="title">f</li>
-                                    <li><button data-open-store="168">Fikołki</button></li>
-                                    <li><button data-open-store="167">Flying Tiger Copenhagen</button></li>
-                                    <li><button data-open-store="166">FONMIX</button></li>
-                                    <li class="title">g</li>
-                                    <li><button data-open-store="138">Galeria Milano</button></li>
-                                    <li><button data-open-store="165">Gatta</button></li>
-                                    <li><button data-open-store="98">Green Caffe Nero</button></li>
-                                    <li><button data-open-store="159">Greenpoint</button></li>
-                                    <li><button data-open-store="210">Grill%Beer</button></li>
-                                    <li><button data-open-store="198">Grycan</button></li>
-                                    <li><button data-open-store="219">Gudi Home</button></li>
                                     <li><button data-open-store="100">GUESS</button></li>
-                                    <li class="title">h</li>
                                     <li><button data-open-store="137">H&amp;M Piętro 0</button></li>
                                     <li><button data-open-store="204">H&amp;M Piętro 1</button></li>
-                                    <li><button data-open-store="156">Hair Styling Team</button></li>
                                     <li><button data-open-store="126">HalfPrice Piętro 0</button></li>
                                     <li><button data-open-store="201">HalfPrice Piętro 1</button></li>
                                     <li><button data-open-store="74">Hebe</button></li>
                                     <li><button data-open-store="22">home&amp;you</button></li>
                                     <li><button data-open-store="129">Homla</button></li>
                                     <li><button data-open-store="199">House</button></li>
-                                    <li class="title">i</li>
-                                    <li><button data-open-store="160">ING Bank Śląski</button></li>
-                                    <li><button data-open-store="158">INGLOT</button></li>
-                                    <li><button data-open-store="212">InPost</button></li>
                                     <li><button data-open-store="25">Intersport</button></li>
-                                    <li><button data-open-store="157">Intimissimi</button></li>
-                                    <li><button data-open-store="79">Iqos</button></li>
-                                    <li><button data-open-store="144">iSpot</button></li>
-                                    <li><button data-open-store="155">ITAKA</button></li>
-                                    <li class="title">j</li>
-                                    <li><button data-open-store="147">Jankes</button></li>
                                     <li><button data-open-store="154">JUNIOR</button></li>
-                                    <li class="title">k</li>
-                                    <li><button data-open-store="149">Kantor Exchange Group</button></li>
-                                    <li><button data-open-store="153">KAPPAHL</button></li>
-                                    <li><button data-open-store="142">Karl Lagerfeld</button></li>
-                                    <li><button data-open-store="111">KFC</button></li>
-                                    <li><button data-open-store="152">KODANO Optyk</button></li>
-                                    <li><button data-open-store="150">KRAY-GREY</button></li>
-                                    <li><button data-open-store="120">KUBENZ</button></li>
-                                    <li class="title">l</li>
-                                    <li><button data-open-store="146">LANĈERTO</button></li>
-                                    <li><button data-open-store="221">Lee Cooper</button></li>
-                                    <li><button data-open-store="214">Lodolandia</button></li>
-                                    <li><button data-open-store="86">Lotto</button></li>
-                                    <li><button data-open-store="143">Lynx Optique</button></li>
-                                    <li class="title">m</li>
-                                    <li><button data-open-store="124">M&amp;M Gold</button></li>
-                                    <li><button data-open-store="50">Magia d'italia</button></li>
                                     <li><button data-open-store="48">MANGO</button></li>
-                                    <li><button data-open-store="141">Martes Sport</button></li>
-                                    <li><button data-open-store="26">mBank</button></li>
-                                    <li><button data-open-store="71">McDonald's</button></li>
-                                    <li><button data-open-store="140">Media Expert</button></li>
                                     <li><button data-open-store="139">Medicine</button></li>
                                     <li><button data-open-store="107">Millenium Bank</button></li>
                                     <li><button data-open-store="136">MOHITO</button></li>
-                                    <li><button data-open-store="135">Monnari</button></li>
-                                    <li><button data-open-store="51">My Shop</button></li>
-                                    <li class="title">n</li>
-                                    <li><button data-open-store="133">NeoNail</button></li>
-                                    <li><button data-open-store="28">New Balance</button></li>
                                     <li><button data-open-store="29">New Yorker</button></li>
-                                    <li><button data-open-store="132">NEWBIE</button></li>
-                                    <li class="title">o</li>
-                                    <li><button data-open-store="130">OKAIDI</button></li>
-                                    <li><button data-open-store="128">Olimp</button></li>
-                                    <li><button data-open-store="127">Olimp Store</button></li>
                                     <li><button data-open-store="123">ONLY</button></li>
-                                    <li><button data-open-store="53">Orange</button></li>
-                                    <li class="title">p</li>
-                                    <li><button data-open-store="122">Pako Lorente</button></li>
-                                    <li><button data-open-store="43">PANDORA</button></li>
-                                    <li><button data-open-store="55">Paris Optique</button></li>
-                                    <li><button data-open-store="57">Pasmanteria Szpileczka</button></li>
                                     <li><button data-open-store="121">PEPCO</button></li>
-                                    <li><button data-open-store="104">Pizza Hut</button></li>
-                                    <li><button data-open-store="97">Play</button></li>
-                                    <li><button data-open-store="220">Pocket store</button></li>
-                                    <li><button data-open-store="69">Poczta Polska</button></li>
-                                    <li><button data-open-store="118">Pralnia EBS</button></li>
-                                    <li><button data-open-store="116">PUCCINI</button></li>
                                     <li><button data-open-store="114">Puma</button></li>
-                                    <li class="title">q</li>
-                                    <li><button data-open-store="45">QUIOSQUE</button></li>
-                                    <li class="title">r</li>
-                                    <li><button data-open-store="113">Rainbow</button></li>
-                                    <li><button data-open-store="112">Recman</button></li>
                                     <li><button data-open-store="92">Reserved Piętro 0</button></li>
                                     <li><button data-open-store="200">Reserved Piętro 1</button></li>
                                     <li><button data-open-store="72">Rossmann</button></li>
                                     <li><button data-open-store="66">RTV Euro AGD</button></li>
-                                    <li><button data-open-store="110">Ryłko</button></li>
-                                    <li class="title">s</li>
-                                    <li><button data-open-store="101">Saffiano</button></li>
-                                    <li><button data-open-store="68">Salad Story</button></li>
-                                    <li><button data-open-store="106">Samsung Brand Store</button></li>
-                                    <li><button data-open-store="10">Santander Bank Polska</button></li>
                                     <li><button data-open-store="109">Sephora</button></li>
-                                    <li><button data-open-store="105">Shizen</button></li>
                                     <li><button data-open-store="103">Sinsay Piętro 0</button></li>
                                     <li><button data-open-store="203">Sinsay Piętro 1</button></li>
-                                    <li><button data-open-store="61">Sizeer</button></li>
-                                    <li><button data-open-store="60">Smoke</button></li>
-                                    <li><button data-open-store="89">SMYK</button></li>
-                                    <li><button data-open-store="96">Sony Centre</button></li>
-                                    <li><button data-open-store="58">Starbucks</button></li>
-                                    <li><button data-open-store="95">SUBWAY</button></li>
                                     <li><button data-open-store="93">Super-Pharm</button></li>
-                                    <li class="title">Ś</li>
-                                    <li><button data-open-store="32">Świat Książki</button></li>
-                                    <li class="title">s</li>
-                                    <li><button data-open-store="91">SWISS</button></li>
-                                    <li class="title">t</li>
-                                    <li><button data-open-store="64">T-Mobile</button></li>
-                                    <li><button data-open-store="90">TATUUM</button></li>
-                                    <li><button data-open-store="218">Tchibo</button></li>
-                                    <li><button data-open-store="88">Tea&amp;Tea</button></li>
-                                    <li><button data-open-store="208">Telakces.com Piętro 0</button></li>
-                                    <li><button data-open-store="185">Telakces.com Piętro 1</button></li>
-                                    <li><button data-open-store="87">Tescoma</button></li>
-                                    <li><button data-open-store="85">Thai Wok</button></li>
-                                    <li><button data-open-store="205">The Beer Store</button></li>
-                                    <li><button data-open-store="65">The North Face</button></li>
-                                    <li><button data-open-store="83">Time for Wax&nbsp;</button></li>
-                                    <li><button data-open-store="81">TIMETREND</button></li>
                                     <li><button data-open-store="82">TK Maxx</button></li>
-                                    <li><button data-open-store="80">TOUS</button></li>
-                                    <li><button data-open-store="78">Triumph</button></li>
-                                    <li><button data-open-store="77">TUI</button></li>
-                                    <li class="title">u</li>
-                                    <li><button data-open-store="75">Unisono</button></li>
-                                    <li class="title">v</li>
-                                    <li><button data-open-store="36">Vanila</button></li>
                                     <li><button data-open-store="73">VENEZIA</button></li>
-                                    <li><button data-open-store="59">Vision Express</button></li>
-                                    <li><button data-open-store="33">Vissavi</button></li>
-                                    <li><button data-open-store="70">VISTULA</button></li>
-                                    <li><button data-open-store="67">vuse inspiration store</button></li>
-                                    <li class="title">w</li>
-                                    <li><button data-open-store="37">W.KRUK</button></li>
-                                    <li><button data-open-store="63">Wakacje.pl</button></li>
-                                    <li><button data-open-store="62">Winestory</button></li>
-                                    <li><button data-open-store="56">WITTCHEN</button></li>
-                                    <li><button data-open-store="42">Wojas</button></li>
-                                    <li><button data-open-store="49">Wólczanka</button></li>
-                                    <li><button data-open-store="47">Wrangler</button></li>
-                                    <li><button data-open-store="46">Wyjątkowy Prezent</button></li>
-                                    <li class="title">x</li>
-                                    <li><button data-open-store="41">X-kom</button></li>
-                                    <li class="title">y</li>
-                                    <li><button data-open-store="39">YES</button></li>
-                                    <li><button data-open-store="44">Yves Rocher</button></li>
-                                    <li class="title">Ż</li>
-                                    <li><button data-open-store="31">Żabka</button></li>
-                                    <li class="title">z</li>
-                                    <li><button data-open-store="40">Zdrofit</button></li>
-                                    <li><button data-open-store="35">ZIAJA</button></li>
-                                </div>
-                                <div id="mCSB_1_scrollbar_vertical"
-                                    class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical"
-                                    style="display: block;">
-                                    <div class="mCSB_draggerContainer">
-                                        <div id="mCSB_1_dragger_vertical" class="mCSB_dragger"
-                                            style="position: absolute; min-height: 175px; display: block; height: 52px; max-height: 715px; top: 0px;">
-                                            <div class="mCSB_dragger_bar" style="line-height: 175px;"></div>
-                                        </div>
-                                        <div class="mCSB_draggerRail"></div>
-                                    </div>
                                 </div>
                             </div>
                         </ul>
                     </div>
-                    <div class="shop-details" data-shop-details>
+                    <div class="shop-details" data-shop-details="">
                         <div class="top">
-                            <h3 class="title">New Yorker</h3>
-                            <p class="subtitle">moda</p>
-                            <div class="desc">
-                                <p>New Yorker należy do liderów europejskiej branży odzieżowej w segmencie Young
-                                    Fashion. Posiada ponad 1000 lokalizacji w 40 krajach na świecie, w których oferuje
-                                    swoim klientom najnowsze trendy w modzie.</p>
-                                <p>Kolekcje tworzą marki własne FSBN, FB SISTER (odzież sportowa i streetwear) AMISU i
-                                    SMOG (styl klasyczny i odzież wieczorowa) jak również CENSORED (bielizna i stroje
-                                    kąpielowe), oraz marka ACCESSOIRES pełną wyróżniających się dodatków.</p>
-                                <p>Z New Yorker żaden trend Cię nie ominie. Zgodnie z mottem „Dress for the moment“
-                                    znajdziesz tu perfekcyjny outfit na każdą okazje.</p>
-                            </div>
+                            <h3 class="title" data-shop-name=""></h3>
+                            <p class="subtitle" data-shop-category=""></p>
+                            <div class="desc" data-shop-description=""></div>
                             <button class="close" data-store-close="">
                                 <img src="assets/images/icon-close.svg" alt="">
                             </button>
                         </div>
                         <div class="bottom">
-                            <div class="qr-code">
-                                <img src="assets/images/qr-code.svg" alt="">
+                            <div class="qr-code" style="display: none" data-shop-qr="">
+                                <img src="" alt="">
                             </div>
-                            <div class="buttons">
-                                <a href="" class="button">Wyznacz trasę</a>
+                            <div class="buttons" data-action-buttons="">
+                                <button data-find-route="normal" class="button">Wyznacz trasę</button>
+                                <button data-find-route="invalid" class="button only-icon">
+                                    <img src="assets/images/disabled_icon.svg" alt="">
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="categories">
-                    <p class="title">Pokaż według kategorii</p>
+                    <p class="title">Pokaż wedłu kategorii</p>
                     <ul class="list">
-                        <li><button>AGD & RTV</button></li>
-                        <li><button>Artykuły spożywcze</button></li>
-                        <li class="current"><button>Moda</button></li>
-                        <li><button>Biżuteria</button></li>
-                        <li><button>Prasa & Multimedia</button></li>
-                        <li><button>Obuwie & torby</button></li>
-                        <li><button>Restauracje i kawiarnie</button></li>
-                        <li><button>Rozrywka</button></li>
-                        <li><button>Sport i hobby</button></li>
-                        <li><button>Dzieci</button></li>
-                        <li><button>Usługi</button></li>
-                        <li><button>Wnętrza i wyposażenie</button></li>
-                        <li><button>Zdrowie u uroda</button></li>
-                        <li><button>Inne</button></li>
+                        <li>
+                            <button class="category-all" data-category-name="" data-switch-category="0">Wszystkie</button>
+                        </li>
+                        <li>
+                            <button data-bean-category="7" data-category-name="" data-switch-category="7">AGD i
+                                RTV</button>
+                        </li>
+                        <li>
+                            <button data-bean-category="17" data-category-name="" data-switch-category="17">Banki</button>
+                        </li>
+                        <li>
+                            <button data-bean-category="5" data-category-name="" data-switch-category="5">Dzieci</button>
+                        </li>
+                        <li>
+                            <button data-bean-category="13" data-category-name="" data-switch-category="13">Inne</button>
+                        </li>
+                        <li>
+                            <button data-bean-category="3" data-category-name="" data-switch-category="3">Moda</button>
+                        </li>
+                        <li>
+                            <button data-bean-category="14" data-category-name="" data-switch-category="14">Obuwie i torby</button>
+                        </li>
+                        <li>
+                            <button data-bean-category="9" data-category-name="" data-switch-category="9">Prasa i Multimedia</button>
+                        </li>
+                        <li>
+                            <button data-bean-category="15" data-category-name="" data-switch-category="15">Sport i hobby</button>
+                        </li>
+                        <li>
+                            <button data-bean-category="16" data-category-name="" data-switch-category="16">Wnętrza</button>
+                        </li>
+                        <li>
+                            <button data-bean-category="6" data-category-name="" data-switch-category="6">Zdrowie i uroda</button>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </main>
-    <div id="keyboard" class="hidden keyboard"><ul class="jkeyboard"><li class="jline"><ul><li class="jkey letter">q</li><li class="jkey letter">w</li><li class="jkey letter">e</li><li class="jkey letter">r</li><li class="jkey letter">t</li><li class="jkey letter">y</li><li class="jkey letter">u</li><li class="jkey letter">i</li><li class="jkey letter">o</li><li class="jkey letter">p</li></ul></li><li class="jline"><ul><li class="jkey letter">a</li><li class="jkey letter">s</li><li class="jkey letter">d</li><li class="jkey letter">f</li><li class="jkey letter">g</li><li class="jkey letter">h</li><li class="jkey letter">j</li><li class="jkey letter">k</li><li class="jkey letter">l</li></ul></li><li class="jline"><ul><li class="jkey shift">&nbsp;</li><li class="jkey letter">z</li><li class="jkey letter">x</li><li class="jkey letter">c</li><li class="jkey letter">v</li><li class="jkey letter">b</li><li class="jkey letter">n</li><li class="jkey letter">m</li><li class="jkey backspace">&nbsp;</li></ul></li><li class="jline"><ul><li class="jkey numeric_switch">123</li><li class="jkey layout_switch">&nbsp;</li><li class="jkey space">&nbsp;</li><li class="jkey return">Enter</li></ul></li></ul><button data-close-keyboard="" class="close"></button><button data-close-keyboard="" class="close"></button></div>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <div class="popup-screen" id="popupScreen" style="display:none"></div>
+    <div id="keyboard" class="hidden keyboard">
+        <ul class="jkeyboard">
+            <li class="jline">
+                <ul>
+                    <li class="jkey letter">q</li>
+                    <li class="jkey letter">w</li>
+                    <li class="jkey letter">e</li>
+                    <li class="jkey letter">r</li>
+                    <li class="jkey letter">t</li>
+                    <li class="jkey letter">y</li>
+                    <li class="jkey letter">u</li>
+                    <li class="jkey letter">i</li>
+                    <li class="jkey letter">o</li>
+                    <li class="jkey letter">p</li>
+                </ul>
+            </li>
+            <li class="jline">
+                <ul>
+                    <li class="jkey letter">a</li>
+                    <li class="jkey letter">s</li>
+                    <li class="jkey letter">d</li>
+                    <li class="jkey letter">f</li>
+                    <li class="jkey letter">g</li>
+                    <li class="jkey letter">h</li>
+                    <li class="jkey letter">j</li>
+                    <li class="jkey letter">k</li>
+                    <li class="jkey letter">l</li>
+                </ul>
+            </li>
+            <li class="jline">
+                <ul>
+                    <li class="jkey shift">&nbsp;</li>
+                    <li class="jkey letter">z</li>
+                    <li class="jkey letter">x</li>
+                    <li class="jkey letter">c</li>
+                    <li class="jkey letter">v</li>
+                    <li class="jkey letter">b</li>
+                    <li class="jkey letter">n</li>
+                    <li class="jkey letter">m</li>
+                    <li class="jkey backspace">&nbsp;</li>
+                </ul>
+            </li>
+            <li class="jline">
+                <ul>
+                    <li class="jkey numeric_switch">123</li>
+                    <li class="jkey layout_switch">&nbsp;</li>
+                    <li class="jkey space">&nbsp;</li>
+                    <li class="jkey return">Enter</li>
+                </ul>
+            </li>
+        </ul><button data-close-keyboard="" class="close"></button><button data-close-keyboard=""
+            class="close"></button>
+    </div>
+    <script>
 
+const STAND = {
+    "stand": "KP1_1",
+    "slug": "kp1_1",
+    "stand_id": "8",
+    "default_floor_id": "4",
+    "default_floor_name": "1",
+    "stores": [
+        {
+            "id": 8,
+            "name": "4F",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003E4F to marka, kt\u0026oacute;ra oferuje wysokiej klasy odzie\u017c i\u0026nbsp;akcesoria sportowe. Jej znakiem rozpoznawczym jest kombinacja jako\u015bci, technologii oraz modnych materia\u0142\u0026oacute;w z\u0026nbsp;nowoczesnym designem. Produkty 4F nadaj\u0105 si\u0119 zar\u0026oacute;wno do treningu, jak i\u0026nbsp;codziennego noszenia.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.: \u003Cspan\u003E+48 727 021 806\u003C\/span\u003E\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220513074005_128_4f_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220513074311_437_4F.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 200,
+            "name": "Reserved Pi\u0119tro 1",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003EReserved to marka odzie\u017cowa, kt\u0026oacute;rej kolekcje dla kobiet, m\u0119\u017cczyzn i\u0026nbsp;dzieci s\u0105 dost\u0119pne w\u0026nbsp;10 europejskich krajach i\u0026nbsp;ciesz\u0105 si\u0119 nies\u0142abn\u0105c\u0105 popularno\u015bci\u0105.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;+48 519 016 350\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220602080340_58_Reserved_logo_logotype_wordmark.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516080036_188_reserved.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": null
+        }, {
+            "id": 123,
+            "name": "ONLY",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003EONLY to marka, kt\u0026oacute;ra powsta\u0142a w\u0026nbsp;1995 roku w\u0026nbsp;Danii. Obecnie sie\u0107 tworzy ponad 4500 sklep\u0026oacute;w na ca\u0142ym \u015bwiecie.ONLY IS ABOUT YOU -\u0026nbsp;AND ONLY YOU \u0026ndash;\u0026nbsp;to filozofia marki, kt\u0026oacute;ra od momentu powstania ubiera pewne siebie i\u0026nbsp;niezale\u017cne m\u0142ode kobiety.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003Cbr \/\u003E\r\nNiedz. niehandlowa: -\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.: 665 560 218\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516103728_321_only_main.jpeg?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220517074407_104_only.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 19,
+            "name": "Cropp",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003ECropp wpisuje si\u0119 w\u0026nbsp;mod\u0119 streetwear, u\u0142atwiaj\u0105c klientom kreacj\u0119 w\u0142asnego stylu dzi\u0119ki kolekcjom damskim i\u0026nbsp;m\u0119skim, uzupe\u0142nionym o\u0026nbsp;szerok\u0105 gam\u0119 akcesori\u0026oacute;w i\u0026nbsp;but\u0026oacute;w. Marka pomaga wyra\u017ca\u0107 emocje i\u0026nbsp;przekracza\u0107 granice.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;+48 519 016 352\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220513080355_376_cropp_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220513080346_248_cropp.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 201,
+            "name": "HalfPrice Pi\u0119tro 1",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003ENiech Ci\u0119 kto\u015b uszczypnie! Je\u015bli uwielbiasz mod\u0119, cenisz markowe produkty i\u0026nbsp;kochasz \u0142owi\u0107 okazje? Je\u015bli tak, to padniesz z\u0026nbsp;ekscytacji. W\u0026nbsp;sklepie HalfPrice znajdziesz swoje ulubione marki nawet o\u0026nbsp;80% taniej. Okazje, kt\u0026oacute;re pokocha ka\u017cdy s\u0105 w\u0026nbsp;HalfPrice!\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003Cbr \/\u003E\r\nNiedz. niehandlowa:\u0026nbsp;-\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.: (22) 812 83 33\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516104104_500_halprice_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516104233_429_halfprice.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": null
+        }, {
+            "id": 199,
+            "name": "House",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003EHouse to ponadczasowa marka modowa, kt\u0026oacute;ra swoj\u0105 autentyczno\u015bci\u0105 i\u0026nbsp;kreatywnym podej\u015bciem do trend\u0026oacute;w jest blisko energii m\u0142odych ludzi.\u0026nbsp;\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;+48 519 016 351\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220920142716_470_HOUSE-LOGO.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220517090221_87_house.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": null
+        }, {
+            "id": 114,
+            "name": "Puma",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003EPuma jest jedn\u0105 z\u0026nbsp;wiod\u0105cych marek sportowych, zajmuj\u0105ca si\u0119 projektowaniem, rozwijaniem, sprzeda\u017c\u0105 i\u0026nbsp;promocj\u0105 obuwia, odzie\u017cy i\u0026nbsp;akcesori\u0026oacute;w sportowych.\u0026nbsp;\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;+48 536 491 847\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516085249_76_puma_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516085301_5_https___eu.puma.com_pl_pl_home.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": null
+        }, {
+            "id": 204,
+            "name": "H\u0026M Pi\u0119tro 1",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003EH\u0026amp;M to szwedzka marka odzie\u017cowa oferuj\u0105ca mod\u0119 damsk\u0105, m\u0119sk\u0105, m\u0142odzie\u017cow\u0105 i\u0026nbsp;dzieci\u0119c\u0105, kosmetyki i\u0026nbsp;akcesoria, a\u0026nbsp;tak\u017ce elementy wyposa\u017cenia wn\u0119trz.\u003C\/p\u003E\u003Cbr\/\u003E\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr\/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\u003Cbr \/\u003E\r\n\u003Cp\u003ETel.:\u0026nbsp;+48 22 273 91 40\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516110402_27_h-and-m_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516110329_151_hm.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": null
+        }, {
+            "id": 121,
+            "name": "PEPCO",
+            "category": "Inne",
+            "category_id": 13,
+            "description": "\u003Cp\u003EPEPCO to mi\u0119dzynarodowa sie\u0107 sklep\u0026oacute;w oferuj\u0105cych odzie\u017c damsk\u0105, m\u0119sk\u0105 i\u0026nbsp;dzieci\u0119c\u0105 oraz artyku\u0142y przemys\u0142owe codziennego u\u017cytku \u0026ndash;\u0026nbsp;wszystko dla domu \u0026ndash;\u0026nbsp;zawsze w\u0026nbsp;atrakcyjnych cenach.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.: +48 616 288 999\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516102654_439_pepco_main.jpeg?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516102737_40_https___pepco.pl_.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": null
+        }, {
+            "id": 203,
+            "name": "Sinsay Pi\u0119tro 1",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003ESinsay odpowiada na potrzeby swoich klient\u0026oacute;w oferuj\u0105c im najnowsze trendy w\u0026nbsp;atrakcyjnych cenach. R\u0026oacute;\u017cnorodno\u015b\u0107 naszej kolekcji umo\u017cliwia swobodne tworzenie modnych stylizacji na ka\u017cd\u0105 okazj\u0119.\u0026nbsp;\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;519 016 353\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516082013_198_sinsay_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516082212_117_https___www.sinsay.com_special_store_.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 66,
+            "name": "RTV Euro AGD",
+            "category": "AGD i RTV",
+            "category_id": 7,
+            "description": "\u003Cp\u003ERTV EURO AGD\u0026nbsp;\u0026ndash;\u0026nbsp;sklep du\u017cych mo\u017cliwo\u015bci\u003C\/p\u003E\r\n\r\n\u003Cp\u003EJeste\u015bmy og\u0026oacute;lnopolsk\u0105 sieci\u0105 wyspecjalizowanych sklep\u0026oacute;w oferuj\u0105cych elektronik\u0119 u\u017cytkow\u0105 oraz sprz\u0119t gospodarstwa domowego.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.: 855 855 855\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220513100701_7_rtv-euro-agd_main.jpeg?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220513100716_307_rtv-euro-agd.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 25,
+            "name": "Intersport",
+            "category": "Sport i hobby",
+            "category_id": 15,
+            "description": "\u003Cp\u003EINTERSPORT jest jedn\u0105 z\u0026nbsp;najwi\u0119kszych sieci sklep\u0026oacute;w sportowych na \u015bwiecie. Salony INTERSPORT posiadaj\u0105 ofert\u0119 do uprawiania r\u0026oacute;\u017cnych dyscyplin sportowych takich jak bieganie, fitness, trening, turystyka, sporty wodne i\u0026nbsp;gry zespo\u0142owe, jak r\u0026oacute;wnie\u017c rowery, rolki, i\u0026nbsp;narciarstwo.\u0026nbsp;\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00-22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00-22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00-21:00\u003Cbr \/\u003E\r\nNiedz. niehandlowa:\u0026nbsp;-\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;885 586 282\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220513080908_336_intersport_main.jpeg?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220513080947_32_intersport.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": null
+        }, {
+            "id": 154,
+            "name": "JUNIOR",
+            "category": "Dzieci",
+            "category_id": 5,
+            "description": "\u003Cp\u003ENasz Sklep -\u0026nbsp;JUNIOR powsta\u0142 aby sprosta\u0107 oczekiwaniom Klient\u0026oacute;w, nawet tych najbardziej wymagaj\u0105cych. To co wyr\u0026oacute;\u017cnia nasz sklep to bogata oferta markowych zabawek i\u0026nbsp;artyku\u0142\u0026oacute;w dla dzieci najwy\u017cszej jako\u015bci a\u0026nbsp;tak\u017ce profesjonalna mi\u0142a obs\u0142uga.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003Cbr \/\u003E\r\nNiedz. niehandlowa:\u0026nbsp;-\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.: 518 634 158\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516115312_223_junior_main.jpeg?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220517071939_116_urodzinyjunior.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": null
+        }, {
+            "id": 163,
+            "name": "Enel Med",
+            "category": "Zdrowie i uroda",
+            "category_id": 6,
+            "description": "\u003Cp\u003ECentrum medyczne enel-med w\u0026nbsp;Galerii P\u0026oacute;\u0142nocnej to konsultacje z\u0026nbsp;najlepsz\u0105 kadr\u0105 lekarzy oraz nowoczesne metody diagnostyki i\u0026nbsp;leczenia. Zapraszamy do plac\u0026oacute;wki na wizyty u\u0026nbsp;lekarzy specjalist\u0026oacute;w m.in. pediatry, ortopedy, okulisty oraz na wizyty stomatologiczne\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;07:00 - 20:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;07:00 - 15:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EUmawianie wizyt\u003C\/strong\u003E\u003Cbr \/\u003E\r\nTel.: 22 23 07 007\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220517070408_358_enel-med_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220517070624_319_https___enel.pl_.png",
+            "floor_id": 4,
+            "floor_name": "1",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 29,
+            "name": "New Yorker",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003ENew Yorker nale\u017cy do lider\u0026oacute;w europejskiej bran\u017cy odzie\u017cowej w\u0026nbsp;segmencie Young Fashion. Posiada ponad 1000 lokalizacji w\u0026nbsp;40 krajach na \u015bwiecie, w\u0026nbsp;kt\u0026oacute;rych oferuje swoim\u0026nbsp; klientom najnowsze trendy w\u0026nbsp;modzie.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;+48 22 431 86 02\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220513081358_361_new-yorker_main.jpeg?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220513081427_184_new-yorker.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 92,
+            "name": "Reserved Pi\u0119tro 0",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003EReserved to marka odzie\u017cowa, kt\u0026oacute;rej kolekcje dla kobiet, m\u0119\u017cczyzn i\u0026nbsp;dzieci s\u0105 dost\u0119pne w\u0026nbsp;10 europejskich krajach i\u0026nbsp;ciesz\u0105 si\u0119 nies\u0142abn\u0105c\u0105 popularno\u015bci\u0105.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;+48 519 016 350\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220602080340_58_Reserved_logo_logotype_wordmark.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516080036_188_reserved.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 170,
+            "name": "eobuwie.pl x Modivo",
+            "category": "Obuwie i torby",
+            "category_id": 14,
+            "description": "\u003Cp\u003Eeobuwie.pl to nowoczesny sklep, kt\u0026oacute;ry oferuje klientom rozwi\u0105zania umo\u017cliwiaj\u0105ce dokonanie wygodnych zakup\u0026oacute;w i \u0142atwe wybranie interesuj\u0105cego produktu spo\u015br\u0026oacute;d \u003Cb\u003Eponad 800 marek.\u003C\/b\u003E To co nas wyr\u0026oacute;\u017cnia od konkurencji to mo\u017cliwo\u015b\u0107 wyboru produkt\u0026oacute;w, w tym tak\u017ce z segmentu premium, w jednym miejscu przy pomocy \u0142atwo dost\u0119pnych i prostych w u\u017cyciu tablet\u0026oacute;w, a tak\u017ce interaktywne przymierzalnie MODIVO. Na miejscu czekaj\u0105 na Ciebie tysi\u0105ce produkt\u0026oacute;w.\u0026nbsp;\u0026nbsp; Przymierzalnie MODIVO, s\u0105 jak luksusowe garderoby.\u0026nbsp;\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22.00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003Cbr \/\u003E\r\nNiedz. niehandlowa:\u0026nbsp;-\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;572 776 126\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20221221132529_441_logo_eobuwie.pl_x_modivo.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220517072907_181_https___www.eobuwie.com.pl_.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 176,
+            "name": "Douglas",
+            "category": "Zdrowie i uroda",
+            "category_id": 6,
+            "description": "\u003Cp\u003EDouglas Polska to najwi\u0119ksza sie\u0107 perfumerii w\u0026nbsp;Polsce. Posiada sklepy w\u0026nbsp;najlepszych centrach i\u0026nbsp;galeriach oraz przy presti\u017cowych ulicach handlowych. W\u0026nbsp;asortymencie Douglas\u0026nbsp; -\u0026nbsp;piel\u0119gnacyjnym, makija\u017cowym i\u0026nbsp;zapachowym znajduje si\u0119 \u0026nbsp;ponad 20.000 produkt\u0026oacute;w luksusowych i\u0026nbsp;popularnych, w\u0026nbsp;tym ponad 70 marek dost\u0119pnych wy\u0142\u0105cznie w\u0026nbsp;Douglas.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr\/\u003E\r\nPn - pt: 10:00 - 22:00\u003Cbr \/\u003E\r\nSobota: 10:00 -\u0026nbsp; 22:00\u003Cbr \/\u003E\r\nNiedziela: 10:00 - 22:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;+48 22 270 13 40\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220517074346_280_douglas_main.jpeg?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220517082311_294_douglas.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 126,
+            "name": "HalfPrice Pi\u0119tro 0",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003ENiech Ci\u0119 kto\u015b uszczypnie! Je\u015bli uwielbiasz mod\u0119, cenisz markowe produkty i\u0026nbsp;kochasz \u0142owi\u0107 okazje? Je\u015bli tak, to padniesz z\u0026nbsp;ekscytacji. W\u0026nbsp;sklepie HalfPrice znajdziesz swoje ulubione marki nawet o\u0026nbsp;80% taniej. Okazje, kt\u0026oacute;re pokocha ka\u017cdy s\u0105 w\u0026nbsp;HalfPrice!\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003Cbr \/\u003E\r\nNiedz. niehandlowa:\u0026nbsp;-\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;(22) 812 83 33\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516104104_500_halprice_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516104233_429_halfprice.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 136,
+            "name": "MOHITO",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003EMOHITO to propozycja dla kobiet ceni\u0105cych niebanaln\u0105 miejsk\u0105 elegancj\u0119.\u003Cbr \/\u003E\r\nSwobodna, pewna siebie, sensualna, kochaj\u0105ca \u017cycie \u0026ndash;\u0026nbsp;tak projektanci polskiej marki widz\u0105 ka\u017cd\u0105 z\u0026nbsp;nas.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.: +48 519 016 354\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516110556_18_mohito_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516110639_54_https___www.mohito.com_special_store_.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 139,
+            "name": "Medicine",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003EKolekcje Medicine tworz\u0105 polscy projektanci, a\u0026nbsp;do wsp\u0026oacute;\u0142pracy cz\u0119sto zapraszani s\u0105 znani arty\u015bci, kt\u0026oacute;rzy tworz\u0105 unikalne, limitowane kolekcje.\u003C\/p\u003E\u003Cbr\/\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\u003Cbr \/\u003E\r\n\u003Cp\u003ETel.:\u0026nbsp;+48 572 728 237\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516111123_466_medicine_main.jpeg?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516111235_95_medicine.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 73,
+            "name": "VENEZIA",
+            "category": "Obuwie i torby",
+            "category_id": 14,
+            "description": "\u003Cp\u003EVENEZIA swoimi kolekcjami zachwyca zar\u0026oacute;wno wielbicieli klasyki, jak i zwolennik\u0026oacute;w ekstrawaganckich modeli. Marka umiej\u0119tnie \u0142\u0105czy wyrafinowan\u0105 elegancj\u0119 z odwa\u017cnym designem, zwracaj\u0105c uwag\u0119 na detale, wysokiej jako\u015bci materia\u0142y oraz innowacyjne wzornictwo.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.: \u003Cspan\u003E+48 510 999 597\u003C\/span\u003E\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220513101545_463_venezia_main.jpeg?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220513101742_228_https___www.venezia.pl_.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 72,
+            "name": "Rossmann",
+            "category": "Zdrowie i uroda",
+            "category_id": 6,
+            "description": "\u003Cp\u003ERossmann jest liderem rynku drogeryjnego w\u0026nbsp;Polsce.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cb\u003EGodziny otwarcia:\u003C\/b\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;9:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;9:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.: +48 42 61 39 700\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220513101653_352_rossman_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220513101712_19_rossmann.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": null
+        }, {
+            "id": 109,
+            "name": "Sephora",
+            "category": "Zdrowie i uroda",
+            "category_id": 6,
+            "description": "\u003Cp\u003ESephora oferuje swoim Klientom swobod\u0119 eksperymentowania z\u0026nbsp;kosmetykami! W\u0026nbsp;jej eleganckich wn\u0119trzach odnajdziesz cenione, innowacyjne i\u0026nbsp;ekscytuj\u0105ce marki \u0026ndash;\u0026nbsp;ka\u017cdy znajdzie co\u015b dla siebie!\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.: +48 22 487 51 38\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516083553_457_sephora_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516083659_125_https___www.sephora.pl_.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 117,
+            "name": "empik",
+            "category": "Prasa i Multimedia",
+            "category_id": 9,
+            "description": "\u003Cp\u003EW\u0026nbsp;salonach Empik mo\u017cna znale\u017a\u0107 produkty takie jak ksi\u0105\u017cki, p\u0142yty muzyczne, filmy, gry multimedialne, czasopisma, artyku\u0142y papiernicze, zabawki edukacyjne, gry planszowe, a\u0026nbsp;tak\u017ce bilety na wydarzenia muzyczne i\u0026nbsp;artystyczne.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;+48 22 462 72 50\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516090049_496_empik_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516090310_207_empik.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": null
+        }, {
+            "id": 100,
+            "name": "GUESS",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003EObecnie firma Guess projektuje, prowadzi sprzeda\u017c, dystrybucj\u0119 i\u0026nbsp;licencjonuje kolekcje odzie\u017cy codziennej, denimu, torebek, zegark\u0026oacute;w, obuwia oraz innych produkt\u0026oacute;w konsumenckich.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;+48 22 812 83 07\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u0026nbsp;\u003C\/p\u003E\r\n\r\n\u003Cdiv class=\u0022store-details-box-wrapper col-sm-4 col-xs-6 store-map\u0022\u003E\r\n\u003Cdiv class=\u0022store-details-box\u0022\u003E\u0026nbsp;\u003C\/div\u003E\r\n\u003C\/div\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516081712_144_guess_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516081737_86_guess.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": null
+        }, {
+            "id": 93,
+            "name": "Super-Pharm",
+            "category": "Zdrowie i uroda",
+            "category_id": 6,
+            "description": "\u003Cp\u003EKoncepcja marki Super-Pharm opiera si\u0119 na po\u0142\u0105czeniu trzech dzia\u0142\u0026oacute;w: apteki, drogerii i\u0026nbsp;perfumerii w\u0026nbsp;jednym miejscu. Do\u015bwiadczeni konsultanci Super-Pharm oferuj\u0105 mi\u0142\u0105 obs\u0142ug\u0119 i\u0026nbsp;profesjonalne porady w\u0026nbsp;zakresie zdrowia, urody i\u0026nbsp;piel\u0119gnacji. Eksperckie doradztwo to znak firmowy Super-Pharm.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u003Cbr\/\u003E\r\n drogeria: (22) 455 65 40\u003Cbr\/\u003E\r\n apteka: (22) 455 65 43\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516080207_188_super-pharm-3-w-1_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516080249_168_https___www.superpharm.pl_.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": null
+        }, {
+            "id": 137,
+            "name": "H\u0026M Pi\u0119tro 0",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003EH\u0026amp;M to szwedzka marka odzie\u017cowa oferuj\u0105ca mod\u0119 damsk\u0105, m\u0119sk\u0105, m\u0142odzie\u017cow\u0105 i\u0026nbsp;dzieci\u0119c\u0105, kosmetyki i\u0026nbsp;akcesoria, a\u0026nbsp;tak\u017ce elementy wyposa\u017cenia wn\u0119trz.\u003C\/p\u003E\u003Cbr\/\u003E\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr\/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\u003Cbr \/\u003E\r\n\u003Cp\u003ETel.:\u0026nbsp;+48 22 273 91 40\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516110402_27_h-and-m_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516110329_151_hm.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": null
+        }, {
+            "id": 103,
+            "name": "Sinsay Pi\u0119tro 0",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003ESinsay odpowiada na potrzeby swoich klient\u0026oacute;w oferuj\u0105c im najnowsze trendy w\u0026nbsp;atrakcyjnych cenach. R\u0026oacute;\u017cnorodno\u015b\u0107 naszej kolekcji umo\u017cliwia swobodne tworzenie modnych stylizacji na ka\u017cd\u0105 okazj\u0119.\u0026nbsp;\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;519 016 353\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516082013_198_sinsay_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516082212_117_https___www.sinsay.com_special_store_.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 119,
+            "name": "Deichmann",
+            "category": "Obuwie i torby",
+            "category_id": 14,
+            "description": "\u003Cp\u003EDeichmann jest wiod\u0105c\u0105 mark\u0105 na mi\u0119dzynarodowym rynku obuwniczym. Oferuje du\u017cy wyb\u0026oacute;r obuwia dla ka\u017cdej grupy wiekowej. R\u0026oacute;\u017cnorodny asortyment odpowiada na zr\u0026oacute;\u017cnicowane oczekiwania klient\u0026oacute;w, poszukuj\u0105cych but\u0026oacute;w wysokiej jako\u015bci, wygodnych i\u0026nbsp;w mo\u017cliwie najkorzystniejszych cenach.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;+48 22 519 09 40\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u0026nbsp;\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516101625_53_deichmann_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516102047_24_deichmann.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": null
+        }, {
+            "id": 82,
+            "name": "TK Maxx",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003ETK Maxx to sie\u0107 sklep\u0026oacute;w, oferuj\u0105ca szeroki wyb\u0026oacute;r ubra\u0144 damskich, m\u0119skich, dzieci\u0119cych oraz but\u0026oacute;w, akcesori\u0026oacute;w i\u0026nbsp;dodatk\u0026oacute;w dla domu modnych marek \u0026ndash;\u0026nbsp;wszystko w\u0026nbsp;cenach do 60% ni\u017cszych od regularnych cen sprzeda\u017cy w\u0026nbsp;Polsce i\u0026nbsp;na \u015bwiecie.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;(22) 431 87 00\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516073301_258_tk-maxx_main.jpeg?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516073348_34_tk-maxx.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 129,
+            "name": "Homla",
+            "category": "Wn\u0119trza",
+            "category_id": 16,
+            "description": "\u003Cp\u003EW\u015br\u0026oacute;d oferty znajduj\u0105 si\u0119 produkty do salonu, sypialni, kuchni, jadalni, \u0142azienki, pokoju dzieci\u0119cego oraz tysi\u0105ce dekoracji i\u0026nbsp;prezent\u0026oacute;w dla ka\u017cdego i\u0026nbsp;na ka\u017cd\u0105 kiesze\u0144. Marka ceni komfort, funkcjonalno\u015b\u0107 i\u0026nbsp;pi\u0119kno.\u0026nbsp;\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003Cbr \/\u003E\r\nNiedz. niehandlowa:\u0026nbsp;-\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;+48 885 998 905\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516104752_32_homla_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516104833_324_homla.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": null
+        },{
+            "id": 22,
+            "name": "home\u0026you",
+            "category": "Wn\u0119trza",
+            "category_id": 16,
+            "description": "\u003Cp\u003EHome\u0026amp;you to marka z\u0026nbsp;artyku\u0142ami wyposa\u017cenia i\u0026nbsp;dekoracji wn\u0119trz. W\u0026nbsp;home\u0026amp;you lubimy tworzy\u0107 wyj\u0105tkow\u0105 atmosfer\u0119 poprzez urozmaicenie codzienno\u015bci drobnymi, \u015bwie\u017cymi akcentami. Pragniemy udowodni\u0107, \u017ce szczeg\u0026oacute;\u0142y maj\u0105 znaczenie.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;\u0026nbsp;571 204 315\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220513080501_97_home-and-you_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220513080534_62_home-you.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": null
+        }, {
+            "id": 107,
+            "name": "Millenium Bank",
+            "category": "Banki",
+            "category_id": 17,
+            "description": "\u003Cp\u003EBank Millennium jest og\u0026oacute;lnopolskim, nowoczesnym bankiem oferuj\u0105cym swoje us\u0142ugi wszystkim segmentom rynku poprzez sie\u0107 plac\u0026oacute;wek, sieci indywidualnych doradc\u0026oacute;w i\u0026nbsp;bankowo\u015b\u0107 elektroniczn\u0105. Wykorzystujemy najnowocze\u015bniejsze technologie i\u0026nbsp;najlepsze tradycje bankowo\u015bci, z\u0026nbsp;powodzeniem konkuruj\u0105c we wszystkich segmentach rynku finansowego.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 21:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 21:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 20:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;801 331 331\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220516083056_450_millennium_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220516083616_244_millenium-bank.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 48,
+            "name": "MANGO",
+            "category": "Moda",
+            "category_id": 3,
+            "description": "\u003Cp\u003EMANGO zosta\u0142o za\u0142o\u017cone w\u0026nbsp;1984 roku i\u0026nbsp;jest obecnie jedn\u0105 z\u0026nbsp;wiod\u0105cych grup modowych na \u015bwiecie. Pochodz\u0105ca z\u0026nbsp;Barcelony marka posiada stale rosn\u0105c\u0105 sie\u0107 sklep\u0026oacute;w o\u0026nbsp;\u0142\u0105cznej powierzchni przekraczaj\u0105cej 800.000 m\u003Csup\u003E2\u003C\/sup\u003E\u0026nbsp;w\u0026nbsp;ponad 110 krajach \u015bwiata.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.:\u0026nbsp;22\u0026nbsp;812 83 30\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220513084014_362_mango_main.png?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220513084044_370_mango.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        }, {
+            "id": 74,
+            "name": "Hebe",
+            "category": "Zdrowie i uroda",
+            "category_id": 6,
+            "description": "\u003Cp\u003EHebe to nowoczesna drogeria, kt\u0026oacute;ra swoim klientom oferuje starannie wyselekcjonowany, zr\u0026oacute;\u017cnicowany asortyment, produkty dost\u0119pne na wy\u0142\u0105czno\u015b\u0107 \u0026ndash;\u0026nbsp;wszystko w\u0026nbsp;wyj\u0105tkowo atrakcyjnych cenach. Nowoczesna koncepcja to po\u0142\u0105czenie dw\u0026oacute;ch format\u0026oacute;w -\u0026nbsp;drogerii cz\u0119sto wyst\u0119puj\u0105cej razem z\u0026nbsp;aptek\u0105.\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cstrong\u003EGodziny otwarcia:\u003C\/strong\u003E\u003Cbr \/\u003E\r\nPn - pt:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nSobota:\u0026nbsp;10:00 - 22:00\u003Cbr \/\u003E\r\nNiedziela:\u0026nbsp;10:00 - 21:00\u003C\/p\u003E\r\n\r\n\u003Cp\u003ETel.: +48 22 206 54 00\u0026nbsp;\u003C\/p\u003E",
+            "icon": "http://studia.local/assets/images/shops/20220513102133_131_hebe_main.jpeg?ver=20230109183354",
+            "qr": "http://studia.local/assets/images/shops/20220513102152_371_hebe.png",
+            "floor_id": 3,
+            "floor_name": "0",
+            "wayfinding_by": "INVALID"
+        }, 
+    ],
+    "floors": [{
+        "id": 4,
+        "name": "1",
+        "description": null,
+        "sketch": "http://studia.local/assets/images/floors/pietro-1.svg",
+        "position": "1",
+        "icons": null
+    }, {
+        "id": 3,
+        "name": "0",
+        "description": null,
+        "sketch": "http://studia.local/assets/images/floors/pietro-0.svg",
+        "position": "2",
+        "icons": null
+    }],
+    "categories": [{
+        "id": 7,
+        "name": "AGD i RTV",
+        "description": null,
+        "marker_color": "#D5D5D5"
+    }, {
+        "id": 17,
+        "name": "Banki",
+        "description": null,
+        "marker_color": "#D5D5D5",
+        "translations": {
+            "en": null,
+            "ua": null
+        }
+    },  {
+        "id": 5,
+        "name": "Dzieci",
+        "description": null,
+        "marker_color": "#D5D5D5"
+    }, {
+        "id": 13,
+        "name": "Inne",
+        "description": null,
+        "marker_color": "#D5D5D5"
+    }, {
+        "id": 3,
+        "name": "Moda",
+        "description": null,
+        "marker_color": "#D5D5D5"
+    }, {
+        "id": 14,
+        "name": "Obuwie i torby",
+        "description": null,
+        "marker_color": "#D5D5D5"
+    }, {
+        "id": 9,
+        "name": "Prasa i Multimedia",
+        "description": null,
+        "marker_color": "#D5D5D5"
+    }, {
+        "id": 15,
+        "name": "Sport i hobby",
+        "description": null,
+        "marker_color": "#D5D5D5"
+    }, {
+        "id": 16,
+        "name": "Wn\u0119trza",
+        "description": null,
+        "marker_color": "#D5D5D5"
+    }, {
+        "id": 6,
+        "name": "Zdrowie i uroda",
+        "description": null,
+        "marker_color": "#D5D5D5"
+    }],
+    "toilet": "6",
+    "atm": "4",
+    "settings": {
+        "SKETCH_COLORS__ACTIVE_STORE": "#D5D5D5",
+        "SKETCH_COLORS__NO_ACTIVE_STORE": "#ececec",
+        "SKETCH_COLORS__ROUTE": "#FF0000"
+    },
+    "stand_icon": "http://studia.local/assets/images/stand-icon.svg"
+};       
+
+        const SCREENSAVERS_AFTER_MINUTES = 1;
+        const DYNAMIC_CONTENT_UPDATE_EVERY_MINUTES = 120;
+        const SCREENSAVERS_DELAY = 30;
+        const STAND_ICON = 'http://studia.local/assets/images/stand-icon.svg'
+    </script>
+    <script src="assets/scripts/jquery.3.1.0.min.js"></script>
+    <!-- <script src="assets/scripts/find_route.js"></script> -->
+    <script src="assets/scripts/jquery.wayfinding.js"></script>
+    <script src="assets/scripts/jkeyboard.js"></script>
     <script src="assets/scripts/application.js"></script>
 </body>
-
 </html>

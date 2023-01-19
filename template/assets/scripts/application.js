@@ -12,10 +12,7 @@ const application = {
     $body: null,
     $stores: null,
     $viewport: null,
-    $promotions: null,
-    $news: null,
     $screensavers: null,
-    $amenities: null,
     $sketch_container: null,
     TIMEOUT_SCREENSAVERS: null,
     TIMEOUT_SCREENSAVERS_DELAY: null,
@@ -24,12 +21,9 @@ const application = {
     MODAL: null,
     floor_classes: [],
     DYNAMIC_CONTENT: null,
-    ATM: null,
-    TOILET: null,
     DRAWING_PATH: false,
     ALERT_SF: false,
     PROGRESSING: false,
-    AMENITIES: [],
     init: function (){
         this.$body = $('body');
         if(typeof STAND !== "undefined"){
@@ -40,18 +34,13 @@ const application = {
             this.DEFAULT_FlOOR = parseInt(STAND.default_floor_id);
             this.COLORS = STAND.settings;
             this.$viewport = this.$body.find('#sketchContainer');
-            this.$news = this.$body.find('[data-dynamic-content-container="news"] .list');
-            this.$promotions = this.$body.find('[data-dynamic-content-container="promotions"] .list');
             this.$screensavers = this.$body.find('#screensavers');
             this.$sketch_container = this.$body.find('#sketchContainer');
-            this.$amenities = this.$body.find('[data-amenities-container]')
             if(this.FLOORS.length > 0){
                 for(let i = 0; i < this.FLOORS.length; i++){
                     this.floor_classes.push('active-floor-' + this.FLOORS[i].position);
                 }
             }
-            this.TOILET = STAND.toilet;
-            this.ATM = STAND.atm;
         }
         if(typeof SCREENSAVERS_AFTER_MINUTES !== 'undefined'){
             this.TIMEOUT_SCREENSAVERS = 60 * SCREENSAVERS_AFTER_MINUTES;
@@ -65,61 +54,13 @@ const application = {
         if(typeof DYNAMIC_CONTENT !== "undefined"){
             this.DYNAMIC_CONTENT = DYNAMIC_CONTENT;
         }
-        if(typeof AMENITIES !== "undefined"){
-            this.AMENITIES = AMENITIES;
-        }
-        // this.eventsController();
-        // this.listenersController();
-        // this.keyboardComponent();
-        // this.screensaversController();
-        // this.getDynamicContent();
-        // this.wayfindingComponent();
-        // this.findCarController();
-        // this.rebootController();
-        // this.scrollbarController();
-        this.simple();
+        this.eventsController();
+        this.listenersController();
+        this.keyboardComponent();
+        this.screensaversController();
+        this.wayfindingComponent();
     },
 
-    simple: function (){
-    
-        $('body').find('[data-open-store]').on('click', function (e){
-            e.preventDefault();
-            $('body').find('[data-shop-details]').addClass('show');
-            $('body').find('[data-store-logo]').css('display', 'block');
-        });
-
-        $('body').delegate('[data-store-close]', 'click', function (e){
-            $('body').find('[data-shop-details]').removeClass('show');
-            $('body').find('[data-store-logo]').css('display', 'none');
-        });
-
-        $('body').find('[data-switch-floor]').on('click', function (e){
-            $('body').find('[data-switch-floor]').removeClass('current');
-            $(this).addClass('current');
-            if($(this).data('switch-floor') == 1){
-                $('body').find('.map-box').removeClass('active-floor-2');
-                $('body').find('.map-box').addClass('active-floor-1');
-            } else{
-                $('body').find('.map-box').removeClass('active-floor-1');
-                $('body').find('.map-box').addClass('active-floor-2');
-
-            }
-        });
-
-
-        $('body').find('[data-search-store] input').on('change paste keyup focus', function (e){
-            e.preventDefault();
-            $('body').find('#keyboard').slideDown();
-        });
-
-        this.$body.delegate('[data-close-keyboard]', 'click', function (e){
-            $('body').find('#keyboard').slideUp();
-        });
-    },
-
-    scrollbarController: function (){
-        $(".mCustomScrollbar").mCustomScrollbar();
-    },
 
     eventsController: function (){
         this.$body.find('[data-switch-floor]').on('click', function (e){
@@ -169,18 +110,6 @@ const application = {
             $(this).addClass('startRoute');
         });
 
-        this.$body.find('[data-find-route-atm]').on('click', function (e){
-            e.preventDefault();
-            $(this).addClass('startRoute');
-            $(document).trigger('APP__FIND_ROUTE_ATM');
-        });
-
-        this.$body.find('[data-find-route-toilet]').on('click', function (e){
-            e.preventDefault();
-            $(this).addClass('startRoute');
-            $(document).trigger('APP__FIND_ROUTE_TOILET');
-        });
-
         this.$body.find('[data-search-store] input').on('change paste keyup focus', function (e){
             e.preventDefault();
             $(document).trigger('APP__SEARCH_STORE', [$(this).val()]);
@@ -196,10 +125,10 @@ const application = {
             $(document).trigger('APP__TOUCH');
         });
 
-        // this.$screensavers.on('click', function (e){
-        //     $(document).trigger('APP__CLOSE_SCREENSAVER');
-        //     $(document).trigger('APP__CLOSE_KEYBOARD');
-        // });
+        this.$screensavers.on('click', function (e){
+            $(document).trigger('APP__CLOSE_SCREENSAVER');
+            $(document).trigger('APP__CLOSE_KEYBOARD');
+        });
 
         this.$body.find('[data-dynamic-content]').on('click', function (e){
             $(document).trigger('APP__OPEN_DYNAMIC_CONTENT', [$(this)]);
@@ -230,21 +159,6 @@ const application = {
             e.preventDefault();
             $(document).trigger('APP__READ_PROMOTION', [$(this).data('promotion')]);
         });
-
-        this.$body.find('[data-amenities-open]').on('click', function (e){
-            e.preventDefault();
-            application.openAmenitiesAction();
-        });
-
-        this.$body.find('[data-amenities-close]').on('click', function (e){
-            e.preventDefault();
-            application.closeAmenitiesAction();
-        });
-
-        this.$body.delegate('[data-amenities-item]', 'click', function (e){
-            e.preventDefault();
-            application.readAmenitiesAction($(this).data('amenities-item'));
-        })
     },
     listenersController: function (){
         const app = this;
@@ -306,8 +220,6 @@ const application = {
         $(document).on('APP__CLOSE_SCREENSAVER', function (){
             app.switchFloorAction(app.DEFAULT_FlOOR);
             app.switchLangAction('pl');
-            app.$news.hide();
-            app.$promotions.hide();
             app.$screensavers.fadeOut(300);
             app.closeDynamicContentAction();
             app.resetStand();
@@ -335,22 +247,6 @@ const application = {
             app.wayfindingAction(type);
         });
 
-        $(document).on('APP__FIND_ROUTE_ATM', function (e){
-            if (app.PROGRESSING){
-                return;
-            }
-            app.PROGRESSING = true;
-            app.wayfindingATMAction();
-        });
-
-        $(document).on('APP__FIND_ROUTE_TOILET', function (e){
-            if (app.PROGRESSING){
-                return;
-            }
-            app.PROGRESSING = true;
-            app.wayfindingTOILETAction();
-        });
-
         $(document).on('wayfinding:animationComplete', function (e){
             setTimeout(function (){
                 //app.resetStand();
@@ -360,8 +256,6 @@ const application = {
                 app.PROGRESSING = false;
                 app.ALERT_SF = false;
                 app.$body.find('[data-find-route]').removeClass('startRoute');
-                app.$body.find('[data-find-route-atm]').removeClass('startRoute');
-                app.$body.find('[data-find-route-toilet]').removeClass('startRoute');
                 app.$body.find(".reset").trigger('click');
             }, 6000);
         });
@@ -411,15 +305,6 @@ const application = {
                 //     app.$body.find('#floor' + app.FLOORS[i].id).append('<img class="floor_icons" src="' + app.FLOORS[i].icons + '">');
                 // }
             }
-
-            app.$sketch_container.panzoom({
-                $zoomIn: app.$body.find(".zoom-in"),
-                $zoomOut: app.$body.find(".zoom-out"),
-                // $zoomRange: app.$body.find(".zoom-range"),
-                $reset: app.$body.find(".reset"),
-                maxScale: 3,
-                minScale: 1
-            });
 
             $('#Rooms a').on('mousedown touchstart', function( e ) {
                 //e.stopImmediatePropagation();
@@ -501,7 +386,6 @@ const application = {
         this.translateCategory(lang);
         this.translateStore(lang);
         this.translationsDynamicContentAction(lang);
-        this.translationAmenitiesAction(lang);
     },
     getCategoryById: function (id){
         if(this.CATEGORIES.length === 0){
@@ -551,7 +435,7 @@ const application = {
         this.$body.find('[data-shop-category]').text(store.category);
         this.$body.find('[data-shop-description]').html(store.description);
 
-        console.log(store.name);
+        // console.log(store.name);
 
         if(store.name == 'Bafra Kebab' || store.name == 'Lodolandia' || store.name == 'InPost' || store.name == 'Allegro'){
             this.$body.find('[data-action-buttons]').addClass('hide');
@@ -589,7 +473,7 @@ const application = {
                     description: this.STORE.description,
                     icon: this.STORE.icon
                 }
-                
+
                 this.translateStore(this.LANG);
                 this.clearFilterCategory();
                 let qr = this.$body.find('[data-shop-qr]');
@@ -723,113 +607,27 @@ const application = {
         }
         if(app.TIMEOUT_SCREENSAVERS_DELAY !== null && $screensavers.length > 1){
             setInterval(function (){
-                if(app.TIMEOUT_SCREENSAVERS_DELAY === 0){
-                    if(index > $screensavers.length){
-                        index = 1;
+                try {
+                    if(app.TIMEOUT_SCREENSAVERS_DELAY === 0){
+                        if(index > $screensavers.length){
+                            index = 1;
+                        }
+                        app.$screensavers.show();
+                        $screensavers.hide();
+                        app.closeModalAction();
+                        $(document).trigger('APP__CLOSE_KEYBOARD');
+                        app.$body.find('[data-item-screensaver="' + index + '"]').show();
+                        index++;
+                        app.TIMEOUT_SCREENSAVERS_DELAY = SCREENSAVERS_DELAY;
                     }
-                    app.$screensavers.show();
-                    $screensavers.hide();
-                    app.closeModalAction();
-                    $(document).trigger('APP__CLOSE_KEYBOARD');
-                    app.$body.find('[data-item-screensaver="' + index + '"]').show();
-                    index++;
-                    app.TIMEOUT_SCREENSAVERS_DELAY = SCREENSAVERS_DELAY;
-                }
 
-                app.TIMEOUT_SCREENSAVERS_DELAY--;
+                    app.TIMEOUT_SCREENSAVERS_DELAY--;
+                }catch (error){
+
+                }
                 // console.log(app.TIMEOUT_SCREENSAVERS_DELAY);
             }, 1000);
         }
-    },
-    dynamicContentController: function (){
-        const app = this;
-        if(app.TIMEOUT_DYNAMIC_CONTENT !== null){
-            setInterval(function (){
-                if(app.TIMEOUT_DYNAMIC_CONTENT === 0){
-                    app.getDynamicContent();
-                    app.TIMEOUT_DYNAMIC_CONTENT = DYNAMIC_CONTENT_UPDATE_EVERY_MINUTES;
-                    return
-                }
-                app.TIMEOUT_DYNAMIC_CONTENT--;
-            }, 1000);
-        }
-    },
-    getDynamicContent: function (){
-        const app = this;
-        $.ajax({
-            url: location.href + '/get-dynamic-content',
-            method: 'GET',
-            dataType: 'JSON',
-            success: function (response){
-                if(response.data){
-                    app.DYNAMIC_CONTENT.data = response.data;
-                    app.translationsDynamicContentAction(app.LANG);
-                }
-            }
-        })
-    },
-    resetModalFindCar: function (){
-        this.$body.find('#formFindCar').show();
-        this.$body.find('#formFindCar input').val('');
-        this.$body.find('#findCarResults').hide();
-        this.$body.find('#findCarLoader').hide();
-        this.$body.find('#findCarData').hide();
-        this.$body.find('#findCarNotFound').hide();
-        this.$body.find('[data-find-car-place]').text('');
-        this.$body.find('[data-find-car-floor]').text('');
-    },
-    findCarController: function (){
-        const app = this,
-              $form = app.$body.find('#formFindCar'),
-              $input = $form.find('input'),
-              $loader = app.$body.find('#findCarLoader'),
-              $content = app.$body.find('#findCarData'),
-              $notFound = app.$body.find('#findCarNotFound')
-
-        let loading = false;
-
-        const search = () => {
-            if(loading){
-                return
-            }
-            loading = true;
-            app.$body.find('#findCarResults').show();
-            $loader.show();
-            $content.hide();
-            $form.hide();
-            $notFound.hide();
-            let plate = $input.val();
-            $(document).trigger('APP__CLOSE_KEYBOARD');
-            $.ajax({
-                url: location.href + '/find-car',
-                method: 'GET',
-                data: {
-                    register_number: plate
-                },
-                dataType: 'JSON',
-                success: function (response) {
-                    $loader.hide();
-                    loading = false;
-                    if(!response.data){
-                        $notFound.show();
-                        return;
-                    }
-                    $content.find('[data-find-car-place]').text(response.data.parking_place);
-                    $content.find('[data-find-car-floor]').text(response.data.floor_name);
-                    $content.show();
-                }
-            });
-        };
-
-        $form.on('submit', function (e){
-            e.preventDefault();
-            search();
-        });
-
-        app.$body.find('[data-reset-find-car-modal]').on('click', function (e){
-            e.preventDefault()
-            app.resetModalFindCar();
-        });
     },
     resetStand: function (){
         this.closeStoreAction();
@@ -857,12 +655,6 @@ const application = {
         }
         this.$sketch_container.trigger('wayfinding:roomClicked', [ { roomId: 'store' + this.STORE.id } ] );
         this.$sketch_container.wayfinding('routeTo', 'store' + this.STORE.id);
-    },
-    wayfindingATMAction(){
-        this.$sketch_container.wayfinding('routeTo', 'atm' + this.ATM);
-    },
-    wayfindingTOILETAction(){
-        this.$sketch_container.wayfinding('routeTo', 'toilet' + this.TOILET);
     },
     wayfindingComponent: function (){
         if(this.$sketch_container.length === 0 || this.FLOORS.length === 0){
@@ -894,109 +686,6 @@ const application = {
             floorChangeAnimationDelay: 4000
         });
     },
-    openModalAction: function (id){
-        this.resetModalFindCar();
-        this.$body.find('[data-input-keyboard]').val('');
-        this.$body.find('[data-modal]').hide();
-        this.$body.find('#popupScreen').fadeIn(300);
-        this.MODAL = this.$body.find(id);
-        this.MODAL.fadeIn(300);
-    },
-    closeModalAction(){
-        if(!this.MODAL){
-            return;
-        }
-        this.$body.find('[data-input-keyboard]').val('');
-        this.$body.find('#popupScreen').fadeOut(300);
-        this.MODAL.fadeOut(300);
-        this.MODAL = null;
-    },
-    openDynamicContentAction: function ($element){
-        this.$body.find('[data-amenities-container]').hide();
-        this.$body.find('[data-dynamic-content-container]').hide();
-        this.$body.find('[data-dynamic-content-container="' + $element.data('dynamic-content') + '"]').show();
-        this.$body.find('[data-dynamic-content-container="' + $element.data('dynamic-content') + '"] .list').css('display', 'flex');
-        this.$body.find('[data-main-activity]').addClass('news-window');
-        this.$body.find('[data-lef-label-nav]').hide();
-        this.$body.find('[data-lef-label-nav="' + $element.data('dynamic-content') + '"]').show();
-
-    },
-    closeDynamicContentAction: function (){
-        this.$body.find('[data-main-activity]').removeClass('news-window');
-        this.$body.find('[data-lef-label-nav]').hide();
-        this.$body.find('[data-lef-label-nav="floor"]').show();
-    },
-    rebootController: function (){
-        const app = this;
-        setInterval(function (){
-            $.ajax({
-                url: location.href + '/reboot',
-                method: 'GET',
-                dataType: 'JSON',
-                success: function (response){
-                    if(typeof response.data.reboot !== "undefined" && response.data.reboot){
-                        app.$body.fadeOut(500);
-                        window.location.reload();
-                    }
-                }
-            })
-
-        }, 15000);
-    },
-    readArticleAction: function (article_index){
-        let article = null;
-        if(this.DYNAMIC_CONTENT){
-            try{
-                article = this.DYNAMIC_CONTENT.data.news[this.LANG][article_index];
-                if(article){
-                    this.$body.find('[data-article-thumb]').attr('src', article.thumb);
-                    this.$body.find('[data-article-title]').text(article.title);
-                    this.$body.find('[data-article-description]').html(article.description);
-                    this.openModalAction('#articleModal');
-                }
-            }catch (error){}
-        }
-    },
-    readPromotionAction: function (promotion_index){
-        let promotion = null;
-        this.closeStoreAction();
-        if(this.DYNAMIC_CONTENT){
-            try{
-                promotion = this.DYNAMIC_CONTENT.data.promotions[this.LANG][promotion_index];
-                if(promotion){
-                    this.$body.find('[data-article-thumb]').attr('src', promotion.thumb);
-                    this.$body.find('[data-article-title]').text(promotion.title);
-                    this.$body.find('[data-article-description]').html(promotion.description);
-                    this.$body.find(".reset").trigger('click touch');
-                    if(promotion.store_id){
-                        this.openStoreAction(parseInt(promotion.store_id));
-                        this.$body.find('[data-open-store-and-find-route]').show();
-                    }else{
-                        this.$body.find('[data-open-store-and-find-route]').hide();
-                    }
-                    this.openModalAction('#promotionModal');
-                }
-            }catch (error){
-                // console.log(error);
-            }
-        }
-    },
-    translationsDynamicContentAction: function (lang){
-        if(this.DYNAMIC_CONTENT){
-            try{
-                let news = this.DYNAMIC_CONTENT.view.news.pl;
-                let promotions = this.DYNAMIC_CONTENT.view.promotions.pl;
-                if(this.DYNAMIC_CONTENT.view.news[lang]){
-                    news = this.DYNAMIC_CONTENT.view.news[lang];
-                }
-                if(this.DYNAMIC_CONTENT.view.promotions[lang]){
-                    promotions = this.DYNAMIC_CONTENT.view.promotions[lang];
-                }
-                this.$news.html(news);
-                this.$promotions.html(promotions);
-            }catch (error){}
-        }
-    },
     alertSwitchFloor: function (currentFloorId, newFloorId){
         if(currentFloorId == newFloorId){
             return;
@@ -1027,36 +716,6 @@ const application = {
             }, 2000);
         }catch (error){
         }
-    },
-    translationAmenitiesAction: function (lang){
-        if(this.AMENITIES){
-            try{
-                let amenities = this.AMENITIES.pl;
-                if(this.AMENITIES[lang]){
-                    amenities = this.AMENITIES[lang]
-                }
-                this.$amenities.find('.list').html(amenities);
-            }catch (error){}
-        }
-    },
-    readAmenitiesAction: function (item){
-        this.closeStoreAction();
-        this.$body.find('[data-amenities--thumb]').attr('src', item.thumb);
-        this.$body.find('[data-amenities--name]').text(item.name);
-        this.$body.find('[data-amenities--description]').html(item.description);
-        this.openModalAction('#amenitiesModal');
-    },
-    closeAmenitiesAction: function (){
-        this.$body.find('[data-main-activity]').removeClass('news-window');
-        this.$body.find('[data-lef-label-nav]').hide();
-        this.$body.find('[data-lef-label-nav="floor"]').show();
-    },
-    openAmenitiesAction: function (){
-        this.$body.find('[data-amenities-container]').show();
-        this.$body.find('[data-dynamic-content-container]').hide();
-        this.$body.find('[data-main-activity]').addClass('news-window');
-        this.$body.find('[data-lef-label-nav]').hide();
-        this.$body.find('[data-lef-label-nav="amenities"]').show();
     },
 };
 

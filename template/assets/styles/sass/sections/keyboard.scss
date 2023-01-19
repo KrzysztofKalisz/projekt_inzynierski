@@ -1,5 +1,4 @@
 .jkeyboard{
-
     .jline{
         ul{
             li{
@@ -47,12 +46,11 @@
     }
 }
 .keyboard{
-    display: none;
     .close{
         background-color: #fff;
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url(../../images/icon-close.svg);
+        background-image: url(../../images/close_icon.svg);
         background-size: 18px;
         position: absolute;
         top: 40px;
